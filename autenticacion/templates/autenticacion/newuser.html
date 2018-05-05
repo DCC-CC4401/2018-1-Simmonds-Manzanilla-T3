@@ -1,6 +1,6 @@
 <h3> creación de usuario nuevo </h3>
 
-<form action ="{% url 'new_user'  %}" method="post" />
+<form action ="{% url 'newuser'  %}" method="post" />
 {% csrf_token %}
 usuario:<br>
 <input type="text" name="usuario"/><br>

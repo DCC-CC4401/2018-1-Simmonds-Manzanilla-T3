@@ -8,12 +8,28 @@ def index(request):
 	return render(request, 'autenticacion/index.html')
 
 
-def new_user(request):
-	return render(request, 'autenticacion/new_user.html')
+def newuser(request):
+	
+	return render(request, 'autenticacion/newuser.html')
 
 
 def loging(request):
-	return render(request, 'autenticacion/loging.html')
+	mensaje = ""
+	if request.method == 'POST':
+		username = request.POST['usuario']
+		password = request.POST['password']
+		user = authenticate(request, username=username, password=password)
+		if user is not None:
+			login(request, user)
+			# Redirect to a success page.
+			return render(request, 'autenticacion/login_succes.html')
+		else:
+			# Return an 'invalid login' error message.
+			mensaje = "error al iniciar sesión"
+	context = {
+		'mensaje' : mensaje
+	}
+	return render(request, 'autenticacion/loging.html', context)
 
 
 def login_succes(request):
