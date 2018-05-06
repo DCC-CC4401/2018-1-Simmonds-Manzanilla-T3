@@ -1,7 +1,7 @@
 <h3> pantalla de loging </h3>
 
 {{ mensaje }}
-<form action ="{% url 'loging'  %}" method="post" />
+<form action ="{% url 'loging' %}" method="post" />
 {% csrf_token %}
 usuario:<br>
 <input type="text" name="usuario"/><br>

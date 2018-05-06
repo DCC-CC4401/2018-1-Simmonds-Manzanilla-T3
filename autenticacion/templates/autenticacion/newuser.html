@@ -1,18 +1,16 @@
 <h3> creación de usuario nuevo </h3>
 
-<form action ="{% url 'newuser'  %}" method="post" />
+<form action ="{% url 'newuser' %}" method="post" />
 {% csrf_token %}
-usuario:<br>
-<input type="text" name="usuario"/><br>
-contraseña:<br>
-<input type="password" name="psw"><br>
-repetir contraseña:<br>
-<input type="password" name="psw 2"><br>
-nombre completo:<br>
-<input type="text" name="nombre completo"/><br>
-RUT:<br>
-<input type="text" name="RUT"/><br>
 correo:<br>
-<input type="text" name="correo"/><br>
-<input type="submit" value="new_user" />
+<input type="text" name="usuario" placeholder="{{mensajeemail}}"  /> <br>
+contraseña:<br>
+<input type="password" name="clave" placeholder="{{mensajeclave}}"><br>
+contraseña:<br>
+<input type="password" name="clave2" placeholder="{{mensajeclave2}}"><br>
+nombre completo:<br>
+<input type="text" name="nombre completo" placeholder="{{mensajenombre}}"/><br>
+RUT:<br>
+<input type="text" name="RUT" placeholder="{{mensajerut}}"/><br>
+<input type="submit" value="crear usuario" />
 

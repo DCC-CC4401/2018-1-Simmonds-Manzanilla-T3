@@ -1,1 +1,15 @@
-<h1>Pantalla de cierre de sesión </h1>
+<h3>Pantalla de cierre de sesión </h3>
+
+<table>
+{% for elemento in usuarios reversed %}
+    <tr>
+    <td>  {{elemento.email}}</td>  
+		<td> | </td>
+    <td>  {{elemento.nombre}}</td>  
+		<td> | </td>
+    <td>  {{elemento.rut}}</td>
+    </td>
+    </tr>
+{% endfor %}
+</table>
+</ul>

@@ -1,7 +1,9 @@
 from django.shortcuts import render
 from django.http import HttpResponse
 from django.contrib.auth import authenticate, login, logout
-from django.contrib.auth.models import User
+from autenticacion.models import MyUser
+from autenticacion.aceptacion import confirmar_validez
+from django.contrib.auth.decorators import login_required
 
 
 def index(request):
@@ -9,7 +11,29 @@ def index(request):
 
 
 def newuser(request):
-	
+	mensaje = ""
+	mensajes = {
+		'usuario' : "",
+		'clave' : "",
+		'clave2' : "",
+		'nombre' : "",
+		'rut' : "",
+	}
+	if request.method == 'POST':
+		usuario = request.POST['usuario']
+		clave = request.POST['clave']
+		clave2 = request.POST['clave2']
+		nombre = request.POST['nombre completo']
+		rut = request.POST['RUT']
+		aceptable, mensajes = confirmar_validez(usuario, nombre, rut, clave, clave2)
+		if not aceptable:
+			context = mensajes
+			return render(request,'autenticacion/newuser.html', context)
+		user = MyUser.objects.create_user(usuario, nombre, rut, clave)
+		return render(request, 'autenticacion/index.html')
+	context = {
+		'mensaje' : mensaje
+	}
 	return render(request, 'autenticacion/newuser.html')
 
 
@@ -35,9 +59,13 @@ def loging(request):
 def login_succes(request):
 	return render(request, 'autenticacion/login_succes.html')
 
-
+@login_required
 def logout(request):
-	return render(request,'autenticacion/logout.html')
+	usuarios = MyUser.objects.all()
+	context = {
+	  'usuarios' : usuarios
+	}
+	return render(request,'autenticacion/logout.html', context)
 
 
 def logout_succes(request):

@@ -82,10 +82,11 @@ DATABASES = {
     }
 }
 
-
 #modelo de usuario usado
 AUTH_USER_MODEL = 'autenticacion.MyUser'
-
+#redirección para el decorator login_required usado en el inicio de sesión
+#si no esta logueado el usuario, lleva a esta página.
+LOGIN_URL = 'autenticacion.loging'
 # Password validation
 # https://docs.djangoproject.com/en/2.0/ref/settings/#auth-password-validators
 
