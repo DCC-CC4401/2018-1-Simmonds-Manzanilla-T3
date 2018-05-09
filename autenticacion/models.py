@@ -1,6 +1,5 @@
 from django.db import models
 from django.contrib.auth.models import (BaseUserManager, AbstractBaseUser)
-from articulos.models import Articulo
 
 
 class MyUserManager(BaseUserManager):
@@ -54,7 +53,6 @@ class MyUser(AbstractBaseUser):
     objects = MyUserManager()
     USERNAME_FIELD = 'email'
     REQUIRED_FIELDS = ['nombre', 'rut']
-    reservas = models.ManyToManyField(Articulo)
 
     def __str__(self):
         return self.email
