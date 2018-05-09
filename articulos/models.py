@@ -14,7 +14,7 @@ class Articulo(models.Model):
 
 
 class Reserva(models.Model):
-    articulo = models.ForeignKey(Articulo)
-    usuario = models.ForeignKey(User)
+    articulo = models.ForeignKey(Articulo, on_delete=models.CASCADE)
+    usuario = models.ForeignKey(User, on_delete=models.CASCADE)
     entrega = models.DateTimeField()
     devolucion = models.DateTimeField()

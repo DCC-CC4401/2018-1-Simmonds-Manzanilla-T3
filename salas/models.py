@@ -12,7 +12,7 @@ class Sala(models.Model):
 
 
 class Reserva(models.Model):
-    sala = models.ForeignKey(Sala)
-    usuario = models.ForeignKey(User)
+    sala = models.ForeignKey(Sala, on_delete=models.CASCADE)
+    usuario = models.ForeignKey(User, on_delete=models.CASCADE)
     inicio = models.TimeField()
     fin = models.TimeField()
