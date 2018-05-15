@@ -1,5 +1,5 @@
 from django.db import models
-from django.contrib.auth.models import User
+from django.conf import settings
 
 # Create your models here.
 
@@ -11,8 +11,8 @@ class Sala(models.Model):
         return self.nombre
 
 
-class Reserva(models.Model):
+class ReservaSala(models.Model):
     sala = models.ForeignKey(Sala, on_delete=models.CASCADE)
-    usuario = models.ForeignKey(User, on_delete=models.CASCADE)
+    usuario = models.ForeignKey(settings.AUTH_USER_MODEL, on_delete=models.CASCADE)
     inicio = models.TimeField()
     fin = models.TimeField()

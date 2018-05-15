@@ -1,4 +1,4 @@
-from django.shortcuts import render
+from django.shortcuts import render, redirect
 from django.http import HttpResponse
 from django.contrib.auth import authenticate, login, logout
 from autenticacion.models import MyUser
@@ -46,7 +46,11 @@ def loging(request):
 		if user is not None:
 			login(request, user)
 			# Redirect to a success page.
-			return render(request, 'autenticacion/login_succes.html')
+			if user.is_admin:
+				#página a la que vá si es administrador.
+				return redirect('landing page admin')
+			#página a la que vá si no es administrador.
+			return redirect('landing page user')
 		else:
 			# Return an 'invalid login' error message.
 			mensaje = "error al iniciar sesión"

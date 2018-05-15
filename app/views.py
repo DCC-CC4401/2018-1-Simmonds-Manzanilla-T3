@@ -1,3 +1,10 @@
 from django.shortcuts import render
 
-# Create your views here.
+def index(request):
+	pass
+
+def landing_page_user(request):
+	return render(request, 'app/landing_page_user.html')
+
+def landing_page_admin(request):
+	return render(request, 'app/landing_page_admin.html')
