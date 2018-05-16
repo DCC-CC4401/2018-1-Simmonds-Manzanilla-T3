@@ -30,20 +30,18 @@ def confirmar_validez(usuario, nombre, rut, clave, clave2):
 	mensajes = {
 		'mensajeemail':mensajemail,
 		'mensajenombre':mensajenombre,
-		'mensajerut':mensajerut,
 		'mensajeclave':mensajeclave,
 		'mensajeclave2':mensajeclave2,
-		'mensajerut':mensajerut
 	}
 	return aceptable, mensajes
 
 #función sacada de https://stackoverflow.com/questions/3217682/checking-validity-of-email-in-django-python, la primera respuesta.
 def validateEmail( email ):
   try:
-    validate_email( email )
-    return True
+	validate_email( email )
+	return True
   except ValidationError:
-    return False
+	return False
 
 def validatePassword( password ):
 	try:
