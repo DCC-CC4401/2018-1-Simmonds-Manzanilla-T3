@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link href="//netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap.min.css" rel="stylesheet">
+    {% block head %}
+    {% endblock %}
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <div class="jumbotron" style="background:lightgray">
+        <h3>
+            <span class="glyphicon glyphicon-book"></span> This is part of the base!
+        </h3>
+    </div>
+    {% block body %}
+    {% endblock %}
+</body>
+</html>

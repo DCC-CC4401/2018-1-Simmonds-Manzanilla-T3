@@ -37,11 +37,11 @@ def confirmar_validez(usuario, nombre, rut, clave, clave2):
 
 #función sacada de https://stackoverflow.com/questions/3217682/checking-validity-of-email-in-django-python, la primera respuesta.
 def validateEmail( email ):
-  try:
-	validate_email( email )
-	return True
-  except ValidationError:
-	return False
+	try:
+		validate_email( email )
+		return True
+	except ValidationError:
+		return False
 
 def validatePassword( password ):
 	try:
