@@ -1,0 +1,67 @@
+{% extends 'base.html' %}
+
+{% block head %}
+{% endblock %}
+
+{% block body %}
+    <header>
+        <div class="container">
+                <h4>{{ articulo.nombre }} >>
+                    {% if True == articulo.estadoActual %}
+                        Disponible
+                    {% else %}
+                        Prestado
+                    {% endif %}
+                </h4>
+            </div>
+    </header>
+
+    <div class="container">
+        <div class="row">
+            <div class="modal-body row">
+                <div class="col-md-7 col-1">
+                    <div>
+                        <img src="../../static/images/pala.jpg">
+                    </div>
+
+                    <div>
+                        <h3>
+                            {{ articulo.descripcion }}
+                        </h3>
+                    </div>
+                </div>
+                <div class="col-md-5 col-3">
+                    <div class="container">
+                        <div>
+                            <p>
+                                <h3>
+                                    Solicitar Reserva
+                                </h3>
+                            </p>
+                            <p>
+                                <h1>
+                                    Calendario
+                                </h1>
+                            </p>
+                        </div>
+                        <div>
+                            <p>
+                                <h3>
+                                    Historial Reservas
+                                </h3>
+                            </p>
+                            <p>
+                                <h1>
+                                    Reservas
+                                </h1>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+{% endblock %}
