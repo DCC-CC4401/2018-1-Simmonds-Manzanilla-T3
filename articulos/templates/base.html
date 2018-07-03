@@ -1,18 +1,29 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <link href="//netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap.min.css" rel="stylesheet">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" integrity="sha384-WskhaSGFgHYWDcbwN70/dfYBj47jz9qbsMId/iRN3ewGhXQFZCSftd1LZCfmhktB" crossorigin="anonymous">
+    <link rel="stylesheet" href="articulos/style.css">
     {% block head %}
     {% endblock %}
     <meta charset="UTF-8">
     <title>Title</title>
 </head>
 <body>
-    <div class="jumbotron" style="background:lightgray">
-        <h3>
-            <span class="glyphicon glyphicon-book"></span> This is part of the base!
-        </h3>
-    </div>
+    <header>
+        <div class="jumbotron" style="background:lightgray">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-6">
+                        <img src="../static/images/logocei.png" class="img-fluid" alt="Responsive image">
+                    </div>
+                    <div class="col-md-6">
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
     {% block body %}
     {% endblock %}
 </body>
