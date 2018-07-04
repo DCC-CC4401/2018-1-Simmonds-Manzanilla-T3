@@ -40,6 +40,7 @@ INSTALLED_APPS = [
 	'autenticacion.apps.AutenticacionConfig',
     'salas.apps.SalasConfig',
     'articulos.apps.ArticulosConfig',
+    'perfilUser',
 ]
 
 MIDDLEWARE = [

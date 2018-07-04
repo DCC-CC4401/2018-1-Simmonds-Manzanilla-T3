@@ -31,6 +31,7 @@ def newuser(request):
 			return render(request,'autenticacion/newuser.html', context)
 		user = MyUser.objects.create_user(usuario, nombre, rut, clave)
 		return render(request, 'autenticacion/index.html')
+	#el uso de la siguiente variable es dudoso.
 	context = {
 		'mensaje' : mensaje
 	}
@@ -48,9 +49,11 @@ def loging(request):
 			# Redirect to a success page.
 			if user.is_admin:
 				#página a la que vá si es administrador.
-				return redirect('landing page admin')
+				return redirect('perfil')
+				#return redirect('landing page admin')
 			#página a la que vá si no es administrador.
-			return redirect('landing page user')
+			return redirect('perfil')
+			#return redirect('landing page user')
 		else:
 			# Return an 'invalid login' error message.
 			mensaje = "error al iniciar sesión"
