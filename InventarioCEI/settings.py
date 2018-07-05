@@ -43,6 +43,7 @@ INSTALLED_APPS = [
     'horarioEspacios.apps.HorarioespaciosConfig',
     'perfilUser',
     'bootstrap4',
+    'fullcalendar',
     ]
 
 
