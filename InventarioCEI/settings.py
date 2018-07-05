@@ -40,8 +40,11 @@ INSTALLED_APPS = [
 	'autenticacion.apps.AutenticacionConfig',
     'salas.apps.SalasConfig',
     'articulos.apps.ArticulosConfig',
+    'horarioEspacios.apps.HorarioespaciosConfig',
     'perfilUser',
-]
+    'bootstrap4',
+    ]
+
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
