@@ -34,3 +34,22 @@ class ReservaArticulo(models.Model):
         related_name='maps')
     entrega = models.DateTimeField()
     devolucion = models.DateTimeField()
+    DEVUELTO = 'DEV'
+    NODEVUELTO = 'NDV'
+    VIGENTE = 'VIG'
+    PERDIDO = 'PER'
+    PENDIENTE = 'PEN'
+    RECHAZADO = 'RCH'
+    ESTADO = (
+        (DEVUELTO, 'Devuelto'),
+        (NODEVUELTO, 'No devuelto'),
+        (VIGENTE, 'Vigente'),
+        (PERDIDO, 'Perdido'),
+        (PENDIENTE, 'Pendiente
+        (RECHAZADO, 'Rechazado'),
+    )
+    estado = models.CharField(
+        max_length=3,
+        choices=ESTADO,
+        default=PENDIENTE,
+    )
