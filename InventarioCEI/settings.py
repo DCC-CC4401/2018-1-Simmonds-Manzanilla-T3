@@ -37,12 +37,14 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    'bootstrap4',
 	'autenticacion.apps.AutenticacionConfig',
     'salas.apps.SalasConfig',
     'articulos.apps.ArticulosConfig',
+    'horarioEspacios.apps.HorarioespaciosConfig',
     'perfilUser',
-]
+    'bootstrap4',
+    ]
+
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
@@ -59,7 +61,7 @@ ROOT_URLCONF = 'InventarioCEI.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [(os.path.join(BASE_DIR, 'templates')),],
+        'DIRS': [],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
