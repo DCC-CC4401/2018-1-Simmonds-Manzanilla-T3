@@ -5,6 +5,7 @@
     {% load static %}
     <meta name="viewport" content="width=device-width, initial-scale=1">
     {% bootstrap_css %}
+    {% bootstrap_javascript %}
     <link rel="stylesheet" href="../articulos/templates/articulos/style.css">
     {% block head %}
     {% endblock %}
@@ -13,6 +14,31 @@
 </head>
 <body>
     <header>
+        <nav class="navbar navbar-expand-lg navbar-light bg-light">
+            <a class="navbar-brand" href="#">
+                <img src={% static "images/logocei.png" %} width="200" height="200" alt="">
+            </a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav">
+                  <li class="nav-item">
+                    <a href="#" class="btn btn-info btn-lg">
+                        <span class="glyphicon glyphicon-envelope"></span>
+                    </a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="#">Pricing</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link disabled" href="#">Disabled</a>
+                  </li>
+                </ul>
+            </div>
+        </nav>
+
+
         <div class="jumbotron" style="background:lightgray">
             <div class="container">
                 <div class="row">
