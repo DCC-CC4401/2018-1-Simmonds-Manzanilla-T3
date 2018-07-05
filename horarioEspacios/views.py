@@ -1,6 +1,6 @@
 from django.shortcuts import render
-
 from django.http import HttpResponse
+from horarioEspacios.models import Events
 
 
 def index(request):
