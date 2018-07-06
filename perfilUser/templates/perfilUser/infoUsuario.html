@@ -1,8 +1,40 @@
-<ul>
-      <li>{{ usuario.nombre }}</a></li>
-      <li>{{ usuario.email }}</a></li>
-      <li>{{ usuario.rut }}</a></li>
-      <li>{{ usuario.password }}</a></li>
-      <li>{{ usuario.is_admin }}</a></li>
-      <li>{{ usuario.is_active }}</a></li>
-</ul>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Bootstrap Example</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+</head>
+<body>
+<div class="container">
+  <ul class="nav nav-pills">
+    <li class="active"><a data-toggle="pill" href="#menuArticulos">Últimos 10 articulos reservados</a></li>
+    <li><a data-toggle="pill" href="#menuSalas">Últimas 10 salas reservadas</a></li>
+  </ul>
+  <div class="tab-content">
+     <div id="menuArticulos" class="tab-pane fade in active">
+       {% include 'perfilUser/ultimas_reservas_articulos.html' %}
+     </div>
+     <div id="menuSalas" class="tab-pane fade">
+       {% include 'perfilUser/ultimas_reservas_salas.html' %}
+    </div>
+  </div>
+</div>
+</body>
+</html>
+
+
+falta poner: icono de usuario -> implicaría que el usuario también tenga una foto asociada.
+boton "reserva tu espacio" -> que lleve a la elección de salas y su horario.
+boton "pide tu artículo" -> que lleve a la elección de artículos.
+
+
+lista de las 10 últimas reservas de espacios, también con la descripción de los espacios.
+lista de las 10 últimas reservas de artículos, también con la descripción de los artículos.
+osea, recuperar las reservas, y elementos asociados.
+poder seleccionar estos elementos de las listas.
+
+y poder eliminar los seleccionados.

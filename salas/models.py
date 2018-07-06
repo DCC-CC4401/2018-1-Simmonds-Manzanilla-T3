@@ -13,5 +13,8 @@ class Sala(models.Model):
 class ReservaSala(models.Model):
     sala = models.ForeignKey(Sala, on_delete=models.CASCADE)
     usuario = models.ForeignKey(settings.AUTH_USER_MODEL, on_delete=models.CASCADE)
+    autorizador = models.ForeignKey(settings.AUTH_USER_MODEL, blank=True,
+        on_delete=models.DO_NOTHING, limit_choices_to={'is_admin': True},
+        related_name='maps')
     inicio = models.TimeField()
     fin = models.TimeField()

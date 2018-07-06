@@ -31,22 +31,25 @@ class ReservaArticulo(models.Model):
     usuario = models.ForeignKey(settings.AUTH_USER_MODEL, on_delete=models.CASCADE)
     autorizador = models.ForeignKey(settings.AUTH_USER_MODEL, blank=True,
         on_delete=models.DO_NOTHING, limit_choices_to={'is_admin': True},
-        related_name='maps')
+        related_name='map')
     entrega = models.DateTimeField()
     devolucion = models.DateTimeField()
+
     DEVUELTO = 'DEV'
     NODEVUELTO = 'NDV'
     VIGENTE = 'VIG'
     PERDIDO = 'PER'
     PENDIENTE = 'PEN'
+    ACEPTADO = 'ACP'
     RECHAZADO = 'RCH'
     ESTADO = (
         (DEVUELTO, 'Devuelto'),
         (NODEVUELTO, 'No devuelto'),
         (VIGENTE, 'Vigente'),
         (PERDIDO, 'Perdido'),
-        (PENDIENTE, 'Pendiente
+        (PENDIENTE, 'Pendiente'),
         (RECHAZADO, 'Rechazado'),
+        (ACEPTADO, 'Aceptado'),
     )
     estado = models.CharField(
         max_length=3,

@@ -1,0 +1,38 @@
+{% if ultimas_salas_reservadas %}
+  <ul class="nav nav-pills nav-stacked col-sm-4">
+  {% for reserva_sala in ultimas_salas_reservadas %}
+    {% if forloop.first %}
+      <li class="active"><a data-toggle="pill" href="#menuReservasSalas{{forloop.counter}}">{{reserva_sala.sala.nombre}}</a></li>
+    {% else %}
+      <li><a data-toggle="pill" href="#menuReservasSalas{{forloop.counter}}">{{reserva_sala.sala.nombre}}</a></li>
+    {% endif %}
+  {% endfor %}
+  </ul>
+  <div class="tab-content col-sm-8">
+  {% for reserva_sala in ultimas_salas_reservadas %}
+  {% if forloop.first %}
+    <div id="menuReservasSalas{{forloop.counter}}" class="tab-pane fade in active">
+  {% else %}
+    <div id="menuReservasSalas{{forloop.counter}}" class="tab-pane fade">
+  {% endif %}
+      <h3>{{reserva_sala.sala.nombre}}</h3>
+      <h3>dsdgñlhdsglkjhflgdfg</h3>
+      <p>entrega: {{reserva_sala.inicio}} </p>
+      <p>devolución: {{reserva_sala.fin}}</p>
+      {# meter la foto del articulo #}
+      <p>{{reserva_sala.sala.descripcion}}</p>
+    </div>
+  {% endfor %}
+  </div>
+
+  {% else %}
+  <ul class="nav nav-pills">
+    <li class="active"><a data-toggle="pill" href="#menuSinReservas">Sin reservas</a></li>
+  </ul>
+  <div class="tab-content">
+    <div id="menuSinReservas" class="tab-pane fade in active">
+      <h3>Sin Salas Reservadas</h3>
+    </div>
+  </div>
+  </div>
+  {% endif %}
