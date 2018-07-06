@@ -1,0 +1,38 @@
+{% if ultimos_espacios_reservados %}
+  <ul class="nav nav-pills nav-stacked col-sm-4">
+  {% for reserva_espacio in ultimos_espacios_reservados %}
+    {% if forloop.first %}
+      <li class="active"><a data-toggle="pill" href="#menuReservasEspacios{{forloop.counter}}">{{reserva_espacio.espacio.nombre}}</a></li>
+    {% else %}
+      <li><a data-toggle="pill" href="#menuReservasEspacios{{forloop.counter}}">{{reserva_espacio.espacio.nombre}}</a></li>
+    {% endif %}
+  {% endfor %}
+  </ul>
+  <div class="tab-content col-sm-8">
+  {% for reserva_espacio in ultimos_espacios_reservados %}
+  {% if forloop.first %}
+    <div id="menuReservasEspacios{{forloop.counter}}" class="tab-pane fade in active">
+  {% else %}
+    <div id="menuReservasEspacios{{forloop.counter}}" class="tab-pane fade">
+  {% endif %}
+      <h3>{{reserva_espacio.espacio.nombre}}</h3>
+      <h3>dsdgñlhdsglkjhflgdfg</h3>
+      <p>entrega: {{reserva_espacio.inicio}} </p>
+      <p>devolución: {{reserva_espacio.fin}}</p>
+      {# meter la foto del articulo #}
+      <p>{{reserva_espacio.espacio.descripcion}}</p>
+    </div>
+  {% endfor %}
+  </div>
+
+  {% else %}
+  <ul class="nav nav-pills">
+    <li class="active"><a data-toggle="pill" href="#menuSinReservas">Sin reservas</a></li>
+  </ul>
+  <div class="tab-content">
+    <div id="menuSinReservas" class="tab-pane fade in active">
+      <h3>Sin Espacios Reservados</h3>
+    </div>
+  </div>
+  </div>
+  {% endif %}

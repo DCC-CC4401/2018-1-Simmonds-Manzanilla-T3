@@ -38,7 +38,7 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
 	'autenticacion.apps.AutenticacionConfig',
-    'salas',
+    'espacios',
     'articulos',
     'horarioEspacios',
     'perfilUser',
