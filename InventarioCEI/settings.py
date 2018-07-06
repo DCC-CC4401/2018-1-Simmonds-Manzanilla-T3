@@ -38,12 +38,11 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
 	'autenticacion.apps.AutenticacionConfig',
-    'salas.apps.SalasConfig',
+    'espacios.apps.EspaciosConfig',
     'articulos.apps.ArticulosConfig',
     'horarioEspacios.apps.HorarioespaciosConfig',
     'perfilUser',
     'bootstrap4',
-    'fullcalendar',
     ]
 
 
