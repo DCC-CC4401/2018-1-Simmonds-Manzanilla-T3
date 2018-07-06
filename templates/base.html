@@ -6,7 +6,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     {% bootstrap_css %}
     {% bootstrap_javascript %}
-    <link rel="stylesheet" href="../articulos/templates/articulos/style.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.1.0/css/all.css" integrity="sha384-lKuwvrZot6UHsBSfcMvOkWwlCMgc0TaWr+30HWe3a4ltaBwTZhyTEggF5tJv8tbt" crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.3/js/bootstrap.min.js" integrity="sha384-a5N7Y/aK3qNeh15eJKGWxsqtnX/wWdSZSKp+81YjTmS15nvnvxKHuzaWwXHDli+4" crossorigin="anonymous"></script>
     {% block head %}
     {% endblock %}
     <meta charset="UTF-8">
@@ -16,42 +19,36 @@
     <header>
         <nav class="navbar navbar-expand-lg navbar-light bg-light">
             <a class="navbar-brand" href="#">
-                <img src={% static "images/logocei.png" %} width="200" height="200" alt="">
+                <img src={% static "images/logocei.png" %}>
             </a>
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
             <div class="collapse navbar-collapse" id="navbarNav">
-                <ul class="navbar-nav">
+                <ul class="navbar-nav ml-auto nav-fill w-30">
                   <li class="nav-item">
-                    <a href="#" class="btn btn-info btn-lg">
-                        <span class="glyphicon glyphicon-envelope"></span>
+                    <a href="#">
+                        <span class="fas fa-envelope fa-3x" style="color:black"></span>
                     </a>
                   </li>
                   <li class="nav-item">
-                    <a class="nav-link" href="#">Pricing</a>
+                    <h4>Tía yosi</h4>
+                    <h5>12345678-9</h5>
+                    <h6>tiayosi@dcc.uchile.cl</h6>
                   </li>
                   <li class="nav-item">
-                    <a class="nav-link disabled" href="#">Disabled</a>
+                       <img class="rounded-circle" src={% static "images/ola.jpg" %} width="80" height="80">
+                  </li>
+                  <li class="nav-item dropdown" style="left:0">
+                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"></a>
+                    <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdownMenuLink">
+                      <a class="dropdown-item" href="#">Configuración de usuario</a>
+                      <a class="dropdown-item" href="#">Cerrar sesión</a>
+                    </div>
                   </li>
                 </ul>
             </div>
         </nav>
-
-
-        <div class="jumbotron" style="background:lightgray">
-            <div class="container">
-                <div class="row">
-                    <div class="col-md-6">
-                        <img src={% static "images/logocei.png" %} class="img-fluid" alt="Responsive image">
-                    </div>
-                    <div class="col-md-6" style="float: right;">
-                        <h2>Tía Jocy</h2>
-                        <h3>123456</h3>
-                    </div>
-                </div>
-            </div>
-        </div>
     </header>
     {% block body %}
     {% endblock %}
