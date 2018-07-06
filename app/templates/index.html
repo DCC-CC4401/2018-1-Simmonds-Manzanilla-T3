@@ -1,0 +1,42 @@
+<a href="" class="file ical">^iCal^</a>
+<table>
+<thead>
+<tr>
+    <th class="number">^Nº^</th>
+    <th class="date">^Inicio^</th>
+    <th class="date">^Fin^</th>
+    <th class="string">^Tipo^</th>
+    <th class="string">^Descripción^</th>
+    <th class="string">^Objetos^</th>
+    <th class="opciones">^Opciones^</th>
+</tr>
+</thead>
+<tbody>
+<!-- foreach( $todos_eventos as $eve_id => $e ) { -->
+<tr>
+    <td>{++$cont}</td>
+    <td><label for="check_{$eve_id}">{$e['fecha_ini_texto']}</label></td>
+    <td>{$e['fecha_fin_texto']}</td>
+    <td><a href="evento?id_evento={$eve_id}">{$e['tipo']}</a></td>
+    <td>{$e['descripcion']}</td>
+    <td>
+        <ul>
+    <!-- foreach( (array) $objetos[$eve_id] as $id_objeto => $o ) { -->
+            <li>
+                <strong>{UTIL::ucwords( $o['tipo_texto'] )}:</strong>
+                <a href="objeto?objeto={$o['tipo']}-{$o['id_objeto']}&semana={$e['fecha_ini']}">{$o['titulo']}</a>
+            </li>
+    <!-- } -->
+        </ul>
+    </td>
+    <td><a href="evento?id_evento={$eve_id}">^{$puede_editar ? 'Editar' : 'Ver'}^</a></td>
+</tr>
+<!-- } -->
+<!-- if( empty( $todos_eventos ) ) { -->
+<tr>
+    <td colspan="0">^No existen eventos.^</td>
+</tr>
+<!-- } -->
+</tbody>
+</table>
+
