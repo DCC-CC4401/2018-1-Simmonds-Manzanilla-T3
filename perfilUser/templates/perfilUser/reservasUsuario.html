@@ -1,43 +1,35 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <title>Bootstrap Example</title>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  <title>Perfil de Usuario - Inventario CEI</title>
+  {% include 'imports.html' %}
 </head>
 <body>
+{% include 'navbar.html' %}
 {% include 'perfilUser/botonesHacerReserva.html' %}
-<div class="panel panel-default">
-  <div class="panel-body">
+
+<div class="container-fluid">
   <ul class="nav nav-pills">
-    <li class="active"><a data-toggle="pill" href="#menuArticulos">
+    <li class=" nav-item">
+      <a class="nav-link active" data-toggle="pill" href="#menuArticulos">
       Últimos 10 articulos reservados</a></li>
-    <li><a data-toggle="pill" href="#menuSalas">
+    <li class=" nav-item">
+      <a class="nav-link" data-toggle="pill" href="#menuSalas">
       Últimas 10 espacios reservadas</a></li>
   </ul>
-  <div class="panel panel-default">
-    <div class="panel-body">
   <div class="tab-content">
-     <div id="menuArticulos" class="tab-pane row fade in active">
+     <div id="menuArticulos" class="tab-pane container active">
        {% include 'perfilUser/ultimas_reservas_articulos.html' %}
-     </div>
-     <div id="menuSalas" class="tab-pane row fade">
+    </div>
+     <div id="menuSalas" class="tab-pane  container fade">
        {% include 'perfilUser/ultimas_reservas_espacios.html' %}
     </div>
   </div>
-</div>
-</div>
-</div>
-</div>
 </div>
 
 </body>
 </html>
 
 
-falta poner imagen de los artículos (y de los espacios si llegan a tener)
 falta hacer eliminables las reservas que se muestran en el listado.
 falta darle un orden más similar al del mokup.

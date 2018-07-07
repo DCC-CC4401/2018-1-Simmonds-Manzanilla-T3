@@ -11,7 +11,7 @@ from django.contrib.auth.hashers import make_password
 #para limpiar todo menos "tom-as_12@hotmail.com" y "catapaz.vilches@gmail.com"
 Articulo.objects.all().delete()
 Espacio.objects.all().delete()
-MyUser.objects.exclude(email="tom-as_12@hotmail.com").exclude(email="catapaz.vilches@gmail.com")
+MyUser.objects.exclude(email="tom-as_12@hotmail.com").exclude(email="catapaz.vilches@gmail.com").delete()
 
 
 # Definiendo los artículos y guardandolos en la base de datos.

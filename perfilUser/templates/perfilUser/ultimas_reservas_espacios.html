@@ -1,37 +1,44 @@
+<div class="container-fluid row">
 {% if ultimos_espacios_reservados %}
-  <ul class="nav nav-pills nav-stacked col-sm-4">
+  <ul class="nav nav-tabs flex-column col">
   {% for reserva_espacio in ultimos_espacios_reservados %}
     {% if forloop.first %}
-      <li class="active"><a data-toggle="pill" href="#menuReservasEspacios{{forloop.counter}}">{{reserva_espacio.espacio.nombre}}</a></li>
+      <li class=" nav-item active">
+        <a class="nav-link active" data-toggle="tab" href="#menuReservasEspacios{{forloop.counter}}">
+          {{reserva_espacio.espacio.nombre}}</a></li>
     {% else %}
-      <li><a data-toggle="pill" href="#menuReservasEspacios{{forloop.counter}}">{{reserva_espacio.espacio.nombre}}</a></li>
+      <li class=" nav-item">
+        <a class="nav-link" data-toggle="tab" href="#menuReservasEspacios{{forloop.counter}}">
+          {{reserva_espacio.espacio.nombre}}</a></li>
     {% endif %}
   {% endfor %}
   </ul>
-  <div class="tab-content col-sm-8">
+  <div class="tab-content col">
   {% for reserva_espacio in ultimos_espacios_reservados %}
   {% if forloop.first %}
-    <div id="menuReservasEspacios{{forloop.counter}}" class="tab-pane fade in active">
+    <div id="menuReservasEspacios{{forloop.counter}}" class="tab-pane container active">
   {% else %}
-    <div id="menuReservasEspacios{{forloop.counter}}" class="tab-pane fade">
+    <div id="menuReservasEspacios{{forloop.counter}}" class="tab-pane container fade">
   {% endif %}
       <h3>{{reserva_espacio.espacio.nombre}}</h3>
       <p>entrega: {{reserva_espacio.inicio}} </p>
       <p>devolución: {{reserva_espacio.fin}}</p>
-      {# meter la foto del articulo #}
       <p>{{reserva_espacio.espacio.descripcion}}</p>
     </div>
   {% endfor %}
-  </div>
 
   {% else %}
-  <ul class="nav nav-pills col-sm-4">
-    <li class="active"><a data-toggle="pill" href="#menuSinReservas">Sin reservas</a></li>
+  <ul class="nav nav-tabs col">
+    <li class=" nav-item">
+      <a class="nav-link active" data-toggle="tab" href="#menuSinReservas">
+      Sin reservas</a></li>
   </ul>
-  <div class="tab-content col-sm-8">
-    <div id="menuSinReservas" class="tab-pane fade in active">
+  <div class="tab-content col">
+    <div id="menuSinReservas" class="tab-pane active">
       <h3>Sin Espacios Reservados</h3>
     </div>
   </div>
   </div>
   {% endif %}
+</div>
+</div>
