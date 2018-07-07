@@ -23,4 +23,18 @@ def informacionUser(request):
         'ultimos_espacios_reservados' : ultimos_espacios_reservados,
 
     }
+    if request.method == 'POST':
+        articulos_a_eliminar=[]
+        espacios_a_eliminar=[]
+        for checkbox in request.POST:
+            if 'espacio' in checkbox:
+                numero = checkbox[7:]
+                espacios_a_eliminar.append(numero)
+            if 'articulo' in checkbox:
+                numero = checkbox[8:]
+                articulos_a_eliminar.append(numero)
+        articulos_a_eliminar.sort(reverse=True)
+        espacios_a_eliminar.sort(reverse=True)
+        [ultimos_espacios_reservados[int(numero)].delete() for numero in espacios_a_eliminar]
+        [ultimos_articulos_reservados[int(numero)].delete() for numero in articulos_a_eliminar]
     return render(request, 'perfilUser/reservasUsuario.html', context)

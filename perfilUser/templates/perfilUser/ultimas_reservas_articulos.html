@@ -1,14 +1,20 @@
 <div class="container-fluid row">
 {% if ultimos_articulos_reservados %}
-  <ul class="nav nav-tabs flex-column col">
+  <ul class="nav nav-tabs flex-column col input-group">
   {% for reserva_articulo in ultimos_articulos_reservados %}
     {% if forloop.first %}
-      <li class=" nav-item active">
-        <a class="nav-link active" data-toggle="tab" href="#menuReservasArticulos{{forloop.counter}}">
+      <li class=" nav-item active row">
+        <div class="input-group-prepend col-1">
+          <input type="checkbox" name="articulo{{forloop.counter0}}">
+        </div>
+        <a class="nav-link active col" data-toggle="tab" href="#menuReservasArticulos{{forloop.counter}}">
           {{reserva_articulo.articulo.nombre}}, {{reserva_articulo.estado}}</a></li>
     {% else %}
-      <li class=" nav-item">
-        <a class="nav-link" data-toggle="tab" href="#menuReservasArticulos{{forloop.counter}}">
+      <li class=" nav-item row">
+        <div class="input-group-prepend col-1">
+          <input type="checkbox" name="articulo{{forloop.counter0}}">
+        </div>
+        <a class="nav-link col" data-toggle="tab" href="#menuReservasArticulos{{forloop.counter}}">
           {{reserva_articulo.articulo.nombre}}, {{reserva_articulo.estado}}</a></li>
     {% endif %}
   {% endfor %}
@@ -31,7 +37,7 @@
   </div>
 
   {% else %}
-  <ul class="nav nav-tabs col">
+  <ul class="nav nav-tabs flex-column col">
     <li class=" nav-item">
       <a class="nav-link active" data-toggle="tab" href="#menuSinReservas">
         Sin reservas</a></li>
