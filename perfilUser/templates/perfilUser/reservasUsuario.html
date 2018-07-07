@@ -9,20 +9,29 @@
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 </head>
 <body>
-<div class="container">
+{% include 'perfilUser/botonesHacerReserva.html' %}
+<div class="panel panel-default">
+  <div class="panel-body">
   <ul class="nav nav-pills">
     <li class="active"><a data-toggle="pill" href="#menuArticulos">Últimos 10 articulos reservados</a></li>
     <li><a data-toggle="pill" href="#menuSalas">Últimas 10 espacios reservadas</a></li>
   </ul>
+  <div class="panel panel-default">
+    <div class="panel-body">
   <div class="tab-content">
-     <div id="menuArticulos" class="tab-pane fade in active">
+     <div id="menuArticulos" class="tab-pane row fade in active">
        {% include 'perfilUser/ultimas_reservas_articulos.html' %}
      </div>
-     <div id="menuSalas" class="tab-pane fade">
+     <div id="menuSalas" class="tab-pane row fade">
        {% include 'perfilUser/ultimas_reservas_espacios.html' %}
     </div>
   </div>
 </div>
+</div>
+</div>
+</div>
+</div>
+
 </body>
 </html>
 

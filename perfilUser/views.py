@@ -13,4 +13,4 @@ def informacionUser(request):
         'ultimos_espacios_reservados' : ultimos_espacios_reservados,
 
     }
-    return render(request, 'perfilUser/infoUsuario.html', context)
+    return render(request, 'perfilUser/reservasUsuario.html', context)
