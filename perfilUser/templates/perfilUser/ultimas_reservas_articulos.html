@@ -1,51 +1,37 @@
 <div class="container-fluid row">
-{% if ultimos_articulos_reservados %}
-  <ul class="nav nav-tabs flex-column col input-group">
-  {% for reserva_articulo in ultimos_articulos_reservados %}
+  {% if ultimos_articulos_reservados %}
+  <ul class="nav nav-pills flex-column col input-group">
+    {% include 'perfilUser/nav_reservas_articulos.html' %}
+  </ul>
+  <div class="tab-content col">
+    {% for reserva_articulo in ultimos_articulos_reservados %}
     {% if forloop.first %}
-      <li class=" nav-item active row">
-        <div class="input-group-prepend col-1">
-          <input type="checkbox" name="articulo{{forloop.counter0}}">
-        </div>
-        <a class="nav-link active col" data-toggle="tab" href="#menuReservasArticulos{{forloop.counter}}">
-          {{reserva_articulo.articulo.nombre}}, {{reserva_articulo.estado}}</a></li>
-    {% else %}
-      <li class=" nav-item row">
-        <div class="input-group-prepend col-1">
-          <input type="checkbox" name="articulo{{forloop.counter0}}">
-        </div>
-        <a class="nav-link col" data-toggle="tab" href="#menuReservasArticulos{{forloop.counter}}">
-          {{reserva_articulo.articulo.nombre}}, {{reserva_articulo.estado}}</a></li>
-    {% endif %}
-  {% endfor %}
-  </ul>
-  <div class="tab-content col">
-  {% for reserva_articulo in ultimos_articulos_reservados %}
-  {% if forloop.first %}
     <div id="menuReservasArticulos{{forloop.counter}}" class="tab-pane container active">
-  {% else %}
-    <div id="menuReservasArticulos{{forloop.counter}}" class="tab-pane container fade">
-  {% endif %}
-      <h3>{{reserva_articulo.articulo.nombre}}</h3>
-      <p> entrega: {{reserva_articulo.entrega}}</p>
-      <p> devolución: {{reserva_articulo.devolucion}}</p>
-      {# aqui va la foto, pero no es necesario segun los requisitos, también, #}
-      {# no he logrado hacer que se muestre #}
-      <p>{{reserva_articulo.articulo.descripcion}}</p>
+      {% else %}
+      <div id="menuReservasArticulos{{forloop.counter}}" class="tab-pane container fade">
+        {% endif %}
+        <h3>{{reserva_articulo.articulo.nombre}}</h3>
+        <p> entrega: {{reserva_articulo.entrega}}</p>
+        <p> devolución: {{reserva_articulo.devolucion}}</p>
+        {# aqui va la foto, pero no es necesario segun los requisitos, también, #}
+        {# no he logrado hacer que se muestre #}
+        <p>{{reserva_articulo.articulo.descripcion}}</p>
+      </div>
+      {% endfor %}
     </div>
-  {% endfor %}
-  </div>
 
-  {% else %}
-  <ul class="nav nav-tabs flex-column col">
-    <li class=" nav-item">
-      <a class="nav-link active" data-toggle="tab" href="#menuSinReservas">
-        Sin reservas</a></li>
-  </ul>
-  <div class="tab-content col">
-    <div id="menuSinReservas" class="tab-pane active">
-      <h3>Sin Articulos Reservados</h3>
+    {% else %}
+    <ul class="nav nav-tabs flex-column col">
+      <li class=" nav-item">
+        <a class="nav-link active" data-toggle="tab" href="#menuSinReservas">
+          Sin reservas
+        </a>
+      </li>
+    </ul>
+    <div class="tab-content col">
+      <div id="menuSinReservas" class="tab-pane active">
+        <h3>Sin Articulos Reservados</h3>
+      </div>
     </div>
+    {% endif %}
   </div>
-  {% endif %}
-</div>
