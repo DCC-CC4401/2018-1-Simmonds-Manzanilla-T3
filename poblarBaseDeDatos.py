@@ -1,61 +1,78 @@
 # este archivo es para correrlo desde la shell de django
-# -> python manage.py shell
+# ~$ python manage.py shell < poblarBaseDeDatos.py
 
 # Imports
 from autenticacion.models import MyUser
 from espacios.models import Espacio, ReservaEspacio
 from articulos.models import Articulo, ReservaArticulo
-from datetime import datetime, date, time
+from datetime import datetime, date, time, timezone, timedelta
 from django.contrib.auth.hashers import make_password
+
 
 #para limpiar todo menos "tom-as_12@hotmail.com" y "catapaz.vilches@gmail.com"
 Articulo.objects.all().delete()
 Espacio.objects.all().delete()
 MyUser.objects.exclude(email="tom-as_12@hotmail.com").exclude(email="catapaz.vilches@gmail.com").delete()
 
+# para imprimir en pantalla el estado de la población de la base de datos.
+def agregado_a_DB(string):
+  print(string + " agregado a la base de datos")
+  return
 
 # Definiendo los artículos y guardandolos en la base de datos.
 microfono = Articulo(nombre= "micrófono1", descripcion="modelo e2019, buen estado", foto= 'static/images/microfono1.jpg')
 microfono.save()
+agregado_a_DB("microfono")
 parlante = Articulo(nombre="parlante1", descripcion="modelo h1.23, entrada auxiliar mala", foto= 'static/images/parlante.jpg')
 parlante.save()
+agregado_a_DB("parlante")
 equipo_musica = Articulo(nombre="equipo de musica", descripcion="equipo sony ultra mix v2, nuevo", foto= 'static/images/equipoMusica.jpeg')
 equipo_musica.save()
+agregado_a_DB("equipo de msica")
 parrilla = Articulo(nombre="parrilla", descripcion="parrilla de asados, le falta una pata, grande", foto= 'static/images/parrilla.jpg')
 parrilla.save()
+agregado_a_DB("parrilla")
 cable = Articulo(nombre="cable plug", descripcion="cable de 20m, para microfonos, guitarras, etc.", foto= 'static/images/cable.jpeg')
 cable.save()
+agregado_a_DB("cable")
 
 # Definiendo los espacios y guardandolos en la base de datos.
 sala1 = Espacio(nombre="B01", descripcion="sala de clases en el -1 de 851, para 100 alumnos, sala anfiteatro")
 sala1.save()
+agregado_a_DB("sala1")
 salaq10 = Espacio(nombre="Q10", descripcion="sala de clases en el 1 de Quimica, para 100 alumnos, sala anfiteatro")
 salaq10.save()
+agregado_a_DB("salaq10")
 
 # Definiendo unos cuantos usuarios (los usuarios admin conviene crearlos desde la consola, con el comando -> python manage.py createsuperuser)
 usuario1 = MyUser( email="correo1@gmail.com", password=make_password("clave1"),nombre="Jhon Doe", rut= "1246810-12")
 usuario1.save()
+agregado_a_DB("usuario1")
 usuario2 = MyUser(email="correo2@gmail.com", password=make_password("clave2"), nombre="Reptar Gomez", rut ="12431325-3")
 usuario2.save()
+agregado_a_DB("usuario2")
 usuario3 = MyUser(email="correo3@gmail.com", password=make_password("clave3"), nombre="Mael Is Verdugo", rut = "446464325-8")
 usuario3.is_admin=True
 usuario3.save()
+agregado_a_DB("usuario3 (admin)")
 usuario4 = MyUser(email="correo4@gmail.com", password=make_password("clave4"), nombre="Domingo Herrera", rut = "111111-2")
 usuario4.is_admin=True
 usuario4.save()
+agregado_a_DB("usuario4 (admin)")
 
 
 #creando días y horas difererntes para crear las reservas.
+tz = timezone(-timedelta(hours=-4))
 d1=date(2018,5,10)
 d2=date(2018,5,15)
 d3=date(2018,6,1)
 d4=date(2018,6,2)
 d5=date(2018,6,3)
 d6=date(2018,6,4)
-h1=time(11,00)
-h2=time(12,00)
-h3=time(13,00)
-h4=time(14,30)
+h1=time(11,00,tzinfo=tz)
+h2=time(12,00,tzinfo=tz)
+h3=time(13,00,tzinfo=tz)
+h4=time(14,30,tzinfo=tz)
 t1=datetime.combine(d1,h1)
 t12=datetime.combine(d1,h2)
 t13=datetime.combine(d1,h3)
@@ -106,6 +123,7 @@ reserva=ReservaArticulo(usuario=usuario1, autorizador=usuario4, articulo=equipo_
 reserva.save()
 reserva=ReservaArticulo(usuario=usuario1, autorizador=usuario4, articulo=microfono, entrega=t12, devolucion=t13)
 reserva.save()
+agregado_a_DB("reservas de artículos del usuario1")
 
 
 reserva=ReservaArticulo(usuario=usuario2, autorizador=usuario3, articulo=cable, entrega=t1, devolucion=t5)
@@ -132,6 +150,7 @@ reserva=ReservaArticulo(usuario=usuario2, autorizador=usuario4, articulo=equipo_
 reserva.save()
 reserva=ReservaArticulo(usuario=usuario2, autorizador=usuario4, articulo=microfono, entrega=t22, devolucion=t23)
 reserva.save()
+agregado_a_DB("reservas de artículos del usuario2")
 
 # ahora, creando las reservas de espacios.
 reserva = ReservaEspacio(usuario=usuario1, autorizador=usuario3, espacio=sala1, inicio=t1,fin=t12)
@@ -146,6 +165,7 @@ reserva = ReservaEspacio(usuario=usuario1, autorizador=usuario4, espacio=salaq10
 reserva.save()
 reserva = ReservaEspacio(usuario=usuario1, autorizador=usuario4, espacio=salaq10, inicio=t44,fin=t44)
 reserva.save()
+agregado_a_DB("reservas de espacios del usuario1")
 
 reserva = ReservaEspacio(usuario=usuario2, autorizador=usuario3, espacio=sala1, inicio=t12,fin=t13)
 reserva.save()
@@ -159,3 +179,5 @@ reserva = ReservaEspacio(usuario=usuario2, autorizador=usuario4, espacio=salaq10
 reserva.save()
 reserva = ReservaEspacio(usuario=usuario2, autorizador=usuario4, espacio=salaq10, inicio=t54,fin=t6)
 reserva.save()
+agregado_a_DB("reservas de espacios del usuario2")
+print("Base de datos poblada con datos de prueba.")
