@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Perfil de Usuario - Inventario CEI</title>
+  {% include 'imports.html' %}
+</head>
+<body>
+  {% include 'navbar.html' %}
+  {% include 'perfilUser/botonesHacerReserva.html' %}
+  <form action ="{% url 'perfil' %}" method="post" />
+  {% csrf_token %}
+  <div class="container-fluid">
+    <ul class="nav nav-pills col m-2">
+      <li class=" nav-item border border-#e6f0ff rounded">
+        <a class="nav-link active" data-toggle="pill" href="#menuArticulos">
+          Últimos 10 articulos reservados
+        </a>
+      </li>
+      <li class=" nav-item border border-#e6f0ff rounded">
+        <a class="nav-link" data-toggle="pill" href="#menuSalas">
+          Últimas 10 espacios reservadas
+        </a>
+      </li>
+      <li>
+        <button type="submit" class="btn btn-light">
+          <i class="fa fa-trash mx-1" aria-hidden="true"></i>
+          eliminar reservas seleccionadas
+        </button>
+      </li>
+    </ul>
+    <div class="tab-content">
+      <div id="menuArticulos" class="tab-pane container active">
+        {% include 'perfilUser/ultimas_reservas_articulos.html' %}
+      </div>
+      <div id="menuSalas" class="tab-pane  container fade">
+        {% include 'perfilUser/ultimas_reservas_espacios.html' %}
+      </div>
+    </div>
+  </div>
+</form>
+</body>
+</html>

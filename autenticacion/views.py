@@ -7,7 +7,7 @@ from django.contrib.auth.decorators import login_required
 
 
 def index(request):
-	return render(request, 'autenticacion/index.html')
+	return login_view(request)
 
 
 def newuser(request):
@@ -38,7 +38,7 @@ def newuser(request):
 	return render(request, 'autenticacion/newuser.html')
 
 
-def loging(request):
+def login_view(request):
 	mensaje = ""
 	if request.method == 'POST':
 		username = request.POST['usuario']
@@ -60,19 +60,16 @@ def loging(request):
 	context = {
 		'mensaje' : mensaje
 	}
-	return render(request, 'autenticacion/loging.html', context)
+	return render(request, 'autenticacion/login.html', context)
 
 
 def login_succes(request):
 	return render(request, 'autenticacion/login_succes.html')
 
 @login_required
-def logout(request):
-	usuarios = MyUser.objects.all()
-	context = {
-	  'usuarios' : usuarios
-	}
-	return render(request,'autenticacion/logout.html', context)
+def logout_view(request):
+	logout(request)
+	return render(request,'autenticacion/logout_succes.html')
 
 
 def logout_succes(request):

@@ -1,4 +1,4 @@
-<h3> creación de usuario nuevo </h3>
+<h3> creación de un nuevo usuario </h3>
 
 <form action ="{% url 'newuser' %}" method="post" />
 {% csrf_token %}
@@ -13,4 +13,4 @@ nombre completo:<br>
 RUT:<br>
 <input type="text" name="RUT" placeholder="{{mensajerut}}"/><br>
 <input type="submit" value="crear usuario" />
-
+</form>

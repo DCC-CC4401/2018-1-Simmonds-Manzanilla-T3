@@ -44,9 +44,9 @@ Requisitos que deben implementar en forma completa: 1-2, 4-5, 7-8, 12, 14-18, 23
 
 ## Perfil del usuario (vista por el dueño del perfil):
 
-- [ ] 23. El sistema debe mostrar el nombre, RUT y correo electrónico del usuario.
+- [x] 23. El sistema debe mostrar el nombre, RUT y correo electrónico del usuario.
 
-- [ ] 25. El sistema debe mostrar si el usuario está habilitado para crear reservas y
+- [x] 25. El sistema debe mostrar si el usuario está habilitado para crear reservas y
   concretar préstamos.
 
 - [ ] 26. El sistema debe mostrar un listado de las últimas 10 reservas realizadas por el
