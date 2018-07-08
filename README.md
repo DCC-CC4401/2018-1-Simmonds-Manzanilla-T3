@@ -49,11 +49,11 @@ Requisitos que deben implementar en forma completa: 1-2, 4-5, 7-8, 12, 14-18, 23
 - [x] 25. El sistema debe mostrar si el usuario está habilitado para crear reservas y
   concretar préstamos.
 
-- [ ] 26. El sistema debe mostrar un listado de las últimas 10 reservas realizadas por el
+- [x] 26. El sistema debe mostrar un listado de las últimas 10 reservas realizadas por el
   usuario, ordenados por fecha (más nuevos al inicio de la lista), indicando cuales
   están pendientes, cuales fueron rechazadas y cuales ya fueron concretadas.  
 
-- [ ] 28. El sistema deber permitir que el usuario marque una o más reservas pendientes
+- [x] 28. El sistema deber permitir que el usuario marque una o más reservas pendientes
   y eliminarlas.
 
 ## Ficha de un artículo:

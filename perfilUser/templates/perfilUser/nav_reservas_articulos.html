@@ -6,15 +6,15 @@
   </div>
   <a class="nav-link active col" data-toggle="tab" href="#menuReservasArticulos{{forloop.counter}}">
     <div class="d-flex justify-content-between">
-    <div>
-    {{reserva_articulo.articulo.nombre}}
-  </div>
-    <div>
-    <span class="badge badge-secondary">
-      {{reserva_articulo.get_estado_display}}
-    </span>
-  </div>
-</div>
+      <div>
+        {{reserva_articulo.articulo.nombre}}
+      </div>
+      <div>
+        <span class="badge badge-secondary">
+          {{reserva_articulo.get_estado_display}}
+        </span>
+      </div>
+    </div>
   </a>
 </li>
 {% else %}
@@ -24,15 +24,15 @@
   </div>
   <a class="nav-link col" data-toggle="tab" href="#menuReservasArticulos{{forloop.counter}}">
     <div class="d-flex justify-content-between">
-    <div>
-    {{reserva_articulo.articulo.nombre}}
-  </div>
-    <div>
-    <span class="badge badge-secondary">
-      {{reserva_articulo.get_estado_display}}
-    </span>
-  </div>
-</div>
+      <div>
+        {{reserva_articulo.articulo.nombre}}
+      </div>
+      <div>
+        <span class="badge badge-secondary">
+          {{reserva_articulo.get_estado_display}}
+        </span>
+      </div>
+    </div>
   </a>
 </li>
 {% endif %}

@@ -21,8 +21,8 @@ def informacionUser(request):
         'usuario' : usuario_actual,
         'ultimos_articulos_reservados' : ultimos_articulos_reservados,
         'ultimos_espacios_reservados' : ultimos_espacios_reservados,
-
     }
+    
     if request.method == 'POST':
         articulos_a_eliminar=[]
         espacios_a_eliminar=[]
