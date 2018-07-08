@@ -4,12 +4,12 @@
 <head>
     <meta charset="UTF-8">
     <title>Horario</title>
-    <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
-    <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-theme.min.css">
+    {% include 'imports.html' %}
     <link rel="stylesheet" href="{% static 'css/horario.css'%}">
 
 </head>
 <body>
+{% include 'navbar.html' %}
 <div class="horario">
 <table>
     <thead>
@@ -113,8 +113,8 @@
 </table>
     <div class="reservas">
         <ul class="lunes">
-            <li class="reserva" style="top:10px; height: 90px;background-color: #618da1">Sala 1</li>
-            <li class="reserva" style="top:115px; height: 50px;background-color: burlywood">Quincho</li>
+            <li class="reserva" style="top:110px; height: 90px;background-color: #618da1">Sala 1</li>
+            <li class="reserva" style="top:235px; height: 50px;background-color: burlywood">Quincho</li>
         </ul>
     </div>
 </div>
