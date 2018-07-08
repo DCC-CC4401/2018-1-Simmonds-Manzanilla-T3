@@ -1,0 +1,39 @@
+{% for reserva_articulo in ultimos_articulos_reservados %}
+{% if forloop.first %}
+<li class=" nav-item active row">
+  <div class="input-group-prepend col-1 px-2">
+    <input type="checkbox" name="articulo{{forloop.counter0}}">
+  </div>
+  <a class="nav-link active col" data-toggle="tab" href="#menuReservasArticulos{{forloop.counter}}">
+    <div class="d-flex justify-content-between">
+    <div>
+    {{reserva_articulo.articulo.nombre}}
+  </div>
+    <div>
+    <span class="badge badge-secondary">
+      {{reserva_articulo.get_estado_display}}
+    </span>
+  </div>
+</div>
+  </a>
+</li>
+{% else %}
+<li class=" nav-item row">
+  <div class="input-group-prepend col-1 px-2">
+    <input type="checkbox" name="articulo{{forloop.counter0}}">
+  </div>
+  <a class="nav-link col" data-toggle="tab" href="#menuReservasArticulos{{forloop.counter}}">
+    <div class="d-flex justify-content-between">
+    <div>
+    {{reserva_articulo.articulo.nombre}}
+  </div>
+    <div>
+    <span class="badge badge-secondary">
+      {{reserva_articulo.get_estado_display}}
+    </span>
+  </div>
+</div>
+  </a>
+</li>
+{% endif %}
+{% endfor %}

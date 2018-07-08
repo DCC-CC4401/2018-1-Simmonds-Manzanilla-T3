@@ -21,18 +21,18 @@
           Últimas 10 espacios reservadas
         </a>
       </li>
-      <li>
+      <li class="pl-5">
         <button type="submit" class="btn btn-light">
           <i class="fa fa-trash mx-1" aria-hidden="true"></i>
           eliminar reservas seleccionadas
         </button>
       </li>
     </ul>
-    <div class="tab-content">
-      <div id="menuArticulos" class="tab-pane container active">
+    <div class="tab-content container-fluid">
+      <div id="menuArticulos" class="tab-pane container-fluid active">
         {% include 'perfilUser/ultimas_reservas_articulos.html' %}
       </div>
-      <div id="menuSalas" class="tab-pane  container fade">
+      <div id="menuSalas" class="tab-pane container-fluid fade">
         {% include 'perfilUser/ultimas_reservas_espacios.html' %}
       </div>
     </div>

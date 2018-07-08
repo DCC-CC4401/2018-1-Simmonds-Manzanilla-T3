@@ -35,21 +35,17 @@ class ReservaArticulo(models.Model):
     entrega = models.DateTimeField()
     devolucion = models.DateTimeField()
 
-    DEVUELTO = 'DEV'
-    NODEVUELTO = 'NDV'
-    VIGENTE = 'VIG'
-    PERDIDO = 'PER'
     PENDIENTE = 'PEN'
     ACEPTADO = 'ACP'
     RECHAZADO = 'RCH'
+    DEVUELTO = 'DEV'
+    NODEVUELTO = 'NDV'
     ESTADO = (
-        (DEVUELTO, 'Devuelto'),
-        (NODEVUELTO, 'No devuelto'),
-        (VIGENTE, 'Vigente'),
-        (PERDIDO, 'Perdido'),
-        (PENDIENTE, 'Pendiente'),
-        (RECHAZADO, 'Rechazado'),
-        (ACEPTADO, 'Aceptado'),
+    (PENDIENTE, 'Pendiente'),
+    (ACEPTADO, 'Aceptado'),
+    (RECHAZADO, 'Rechazado'),
+    (DEVUELTO, 'Devuelto'),
+    (NODEVUELTO, 'No devuelto'),
     )
     estado = models.CharField(
         max_length=3,
