@@ -5,7 +5,7 @@ from articulos.models import ReservaArticulo
 
 
 @login_required
-def informacionUser(request):
+def informacionUsuario(request):
     """ Vista de la pantalla de perfil de usuario, contiene la navbar,
         botones que redireccionan hacia la reserva de salas y
         a la reserva de artículos, y listados (ordenados por fecha)
@@ -22,7 +22,7 @@ def informacionUser(request):
         'ultimos_articulos_reservados' : ultimos_articulos_reservados,
         'ultimos_espacios_reservados' : ultimos_espacios_reservados,
     }
-    
+
     if request.method == 'POST':
         articulos_a_eliminar=[]
         espacios_a_eliminar=[]
@@ -37,4 +37,4 @@ def informacionUser(request):
         espacios_a_eliminar.sort(reverse=True)
         [ultimos_espacios_reservados[int(numero)].delete() for numero in espacios_a_eliminar]
         [ultimos_articulos_reservados[int(numero)].delete() for numero in articulos_a_eliminar]
-    return render(request, 'perfilUser/reservasUsuario.html', context)
+    return render(request, 'perfilUsuario/perfilUsuario.html', context)

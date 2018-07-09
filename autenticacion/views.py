@@ -49,7 +49,7 @@ def login_view(request):
 			# Redirect to a success page.
 			if user.is_admin:
 				#página a la que vá si es administrador.
-				return redirect('perfil')
+				return redirect('landingPageAdmin')
 				#return redirect('landing page admin')
 			#página a la que vá si no es administrador.
 			return redirect('perfil')

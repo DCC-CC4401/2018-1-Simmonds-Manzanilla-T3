@@ -6,7 +6,7 @@
 </head>
 <body>
   {% include 'navbar.html' %}
-  {% include 'perfilUser/botonesHacerReserva.html' %}
+  {% include 'perfilUsuario/botonesHacerReserva.html' %}
   <form action ="{% url 'perfil' %}" method="post" />
   {% csrf_token %}
   <div class="container-fluid">
@@ -24,16 +24,16 @@
       <li class="pl-5">
         <button type="submit" class="btn btn-light">
           <i class="fa fa-trash mx-1" aria-hidden="true"></i>
-          eliminar reservas seleccionadas
+          Eliminar reservas seleccionadas
         </button>
       </li>
     </ul>
     <div class="tab-content container-fluid">
       <div id="menuArticulos" class="tab-pane container-fluid active">
-        {% include 'perfilUser/ultimas_reservas_articulos.html' %}
+        {% include 'perfilUsuario/ultimas_reservas_articulos.html' %}
       </div>
       <div id="menuSalas" class="tab-pane container-fluid fade">
-        {% include 'perfilUser/ultimas_reservas_espacios.html' %}
+        {% include 'perfilUsuario/ultimas_reservas_espacios.html' %}
       </div>
     </div>
   </div>

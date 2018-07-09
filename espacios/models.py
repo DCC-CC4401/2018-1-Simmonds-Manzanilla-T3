@@ -22,7 +22,7 @@ class Espacio(models.Model):
     )
 
     def __str__(self):
-        return self.nombre
+        return " espacio número " + str(self.id) + ": " + self.nombre
 
 
 class ReservaEspacio(models.Model):
@@ -47,3 +47,7 @@ class ReservaEspacio(models.Model):
     choices=ESTADO,
     default=PENDIENTE,
     )
+
+    def __str__(self):
+        return ("reserva de espacio número " + str(self.id) + ", usuario :" +
+         str(self.usuario.email) + ", espacio: "+ str(self.espacio))
