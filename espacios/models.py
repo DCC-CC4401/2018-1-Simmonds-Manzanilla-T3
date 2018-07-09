@@ -31,8 +31,8 @@ class ReservaEspacio(models.Model):
     autorizador = models.ForeignKey(settings.AUTH_USER_MODEL, blank=True,
         on_delete=models.DO_NOTHING, limit_choices_to={'is_admin': True},
         related_name='maps')
-    inicio = models.TimeField()
-    fin = models.TimeField()
+    inicio = models.DateTimeField()
+    fin = models.DateTimeField()
     PENDIENTE = 'PEN'
     ACEPTADA = 'ACP'
     RECHAZADA = 'RCH'

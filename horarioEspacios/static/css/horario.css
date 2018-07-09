@@ -36,14 +36,13 @@ div.horario th {
 ul.lunes  {
     position: absolute;
     top: 85px;
-    left: 80px;
+    left: 200px;
     width: 800px;
 }
 
 li.reserva {
     position: absolute;
     border: 1px solid #b8b0d2;
-    background-color: lightblue;
     padding-top: 8px;
     padding-left: 8px;
     width: 120px;

@@ -1,14 +1,13 @@
 {% load staticfiles %}
-<!DOCTYPE html>
-<html lang="en">
-<head>
+{% block head %}
     <meta charset="UTF-8">
     <title>Horario</title>
     {% include 'imports.html' %}
     <link rel="stylesheet" href="{% static 'css/horario.css'%}">
 
-</head>
-<body>
+{% endblock %}
+
+{% block body %}
 {% include 'navbar.html' %}
 <div class="horario">
 <table>
@@ -113,11 +112,10 @@
 </table>
     <div class="reservas">
         <ul class="lunes">
-            <li class="reserva" style="top:110px; height: 90px;background-color: #618da1">Sala 1</li>
-            <li class="reserva" style="top:235px; height: 50px;background-color: burlywood">Quincho</li>
+            <li class="reserva" style="top:200px; height: 90px;background-color: lightblue">Sala 1</li>
+            <li class="reserva" style="top:300px; height: 50px;background-color: burlywood">Quincho</li>
         </ul>
     </div>
 </div>
 
-</body>
-</html>
+{% endblock %}
