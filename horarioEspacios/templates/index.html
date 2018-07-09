@@ -2,19 +2,25 @@
 {% load staticfiles %}
 
 {% block head %}
-    <meta charset="UTF-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1">
-
-	<link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,600" rel="stylesheet">
+    {% include 'imports.html' %}
 	<link rel="stylesheet" href="{% static 'css/reset.css'%}"> <!-- CSS reset -->
 	<link rel="stylesheet" href="{% static 'css/style.css'%}"> <!-- Resource style -->
 
 	<title>Horario</title>
 {% endblock %}
 {% block body %}
+{% include 'navbar.html' %}
+
+<div class="container">
+    <a href="#" role="button" class="btn btn-info">Semana anterior</a>
+    <a href="#" role="button" class="btn btn-info">Semana siguiente</a>
+</div>
+
 <div class="cd-schedule loading">
 	<div class="timeline">
 		<ul>
+            <li><span>06:00</span></li>
+            <li><span>07:00</span></li>
 			<li><span>08:00</span></li>
 			<li><span>09:00</span></li>
 			<li><span>10:00</span></li>
@@ -28,149 +34,86 @@
 			<li><span>18:00</span></li>
 		</ul>
 	</div> <!-- .timeline -->
-
-	<div class="events">
+    <div class="events">
 		<ul>
 			<li class="events-group">
 				<div class="top-info"><span>Lunes</span></div>
-
-				<ul>
-					<li class="single-event" data-start="08:30" data-end="10:00" data-content="event-abs-circuit" data-event="event-1">
+                <ul>
+                {% for reserva in reservas %}
+                    {% if reserva.inicio.weekday == 0 %}
+					<li class="single-event" data-start={{ reserva.inicio.time }} data-end={{ reserva.fin.time }} data-content="{{ reserva }}" data-event="event-1" style="background-color: #A2B9B2">
 						<a href="#0">
-							<em class="event-name">Sala 01</em>
+							<em class="event-name">{{ reserva.espacio.nombre }}</em>
 						</a>
 					</li>
-
-					<li class="single-event" data-start="12:00" data-end="13:30" data-content="event-rowing-workout" data-event="event-2">
-						<a href="#0">
-							<em class="event-name">Sala 02</em>
-						</a>
-					</li>
-
-					<li class="single-event" data-start="13:00" data-end="15:00"  data-content="event-yoga-1" data-event="event-3">
-						<a href="#0">
-							<em class="event-name">Quincho</em>
-						</a>
-					</li>
+                    {% endif %}
+                {% endfor %}
 				</ul>
 			</li>
 
 			<li class="events-group">
 				<div class="top-info"><span>Martes</span></div>
-
-				<ul>
-					<li class="single-event" data-start="10:00" data-end="12:00"  data-content="event-rowing-workout" data-event="event-2">
+                <ul>
+                {% for reserva in reservas %}
+                    {% if reserva.inicio.weekday == 1 %}
+					<li class="single-event" data-start={{ reserva.inicio.time }} data-end={{ reserva.fin.time }} data-content="{{ reserva }}" data-event="event-2">
 						<a href="#0">
-							<em class="event-name">Sala 01</em>
+							<em class="event-name">{{ reserva.espacio.nombre }}</em>
 						</a>
 					</li>
-
-					<li class="single-event" data-start="12:00" data-end="13:30"  data-content="event-restorative-yoga" data-event="event-4">
-						<a href="#0">
-							<em class="event-name">Sala 02</em>
-						</a>
-					</li>
-
-					<li class="single-event" data-start="13:30" data-end="15:00" data-content="event-abs-circuit" data-event="event-1">
-						<a href="#0">
-							<em class="event-name">Quincho</em>
-						</a>
-					</li>
-
-					<li class="single-event" data-start="15:45" data-end="17:45"  data-content="event-yoga-1" data-event="event-3">
-						<a href="#0">
-							<em class="event-name">Sala 03</em>
-						</a>
-					</li>
-				</ul>
-			</li>
+                    {% endif %}
+                {% endfor %}
+                </ul>
 
 			<li class="events-group">
 				<div class="top-info"><span>Miercoles</span></div>
-
 				<ul>
-					<li class="single-event" data-start="08:30" data-end="10:15" data-content="event-restorative-yoga" data-event="event-4">
+                {% for reserva in reservas %}
+                    {% if reserva.inicio.weekday == 2 %}
+					<li class="single-event" data-start={{ reserva.inicio.time }} data-end={{ reserva.fin.time }} data-content="{{ reserva }}" data-event="event-1">
 						<a href="#0">
-							<em class="event-name">Sala 01</em>
+							<em class="event-name">{{ reserva.espacio.nombre }}</em>
 						</a>
 					</li>
-
-					<li class="single-event" data-start="10:15" data-end="11:45" data-content="event-yoga-1" data-event="event-3">
-						<a href="#0">
-							<em class="event-name">Sala 02</em>
-						</a>
-					</li>
-
-					<li class="single-event" data-start="12:00" data-end="13:00"  data-content="event-rowing-workout" data-event="event-2">
-						<a href="#0">
-							<em class="event-name">Sala 03</em>
-						</a>
-					</li>
-
-					<li class="single-event" data-start="13:30" data-end="15:00" data-content="event-yoga-1" data-event="event-3">
-						<a href="#0">
-							<em class="event-name">Quincho</em>
-						</a>
-					</li>
+                    {% endif %}
+                {% endfor %}
 				</ul>
 			</li>
+
 
 			<li class="events-group">
 				<div class="top-info"><span>Jueves</span></div>
-
-				<ul>
-					<li class="single-event" data-start="09:00" data-end="10:15" data-content="event-abs-circuit" data-event="event-1">
+                <ul>
+                 {% for reserva in reservas %}
+                    {% if reserva.inicio.weekday == 3 %}
+					<li class="single-event" data-start={{ reserva.inicio.time }} data-end={{ reserva.fin.time }} data-content="{{ reserva }}" data-event="event-1">
 						<a href="#0">
-							<em class="event-name">Sala 01</em>
+							<em class="event-name">{{ reserva.espacio.nombre }}</em>
 						</a>
 					</li>
-
-					<li class="single-event" data-start="12:00" data-end="13:30" data-content="event-restorative-yoga" data-event="event-4">
-						<a href="#0">
-							<em class="event-name">Sala 02</em>
-						</a>
-					</li>
-
-					<li class="single-event" data-start="16:00" data-end="17:30" data-content="event-abs-circuit" data-event="event-1">
-						<a href="#0">
-							<em class="event-name">Sala 03</em>
-						</a>
-					</li>
-
-					<li class="single-event" data-start="16:00" data-end="17:30"  data-content="event-rowing-workout" data-event="event-2">
-						<a href="#0">
-							<em class="event-name">Sala 04</em>
-						</a>
-					</li>
+                    {% endif %}
+                {% endfor %}
 				</ul>
 			</li>
+
 
 			<li class="events-group">
 				<div class="top-info"><span>Viernes</span></div>
-
-				<ul>
-					<li class="single-event" data-start="10:00" data-end="12:00"  data-content="event-rowing-workout" data-event="event-2">
+                <ul>
+                {% for reserva in reservas %}
+                    {% if reserva.inicio.weekday == 4 %}
+					<li class="single-event" data-start={{ reserva.inicio.time }} data-end={{ reserva.fin.time }} data-content="{{ reserva }}" data-event="event-1">
 						<a href="#0">
-							<em class="event-name">Sala 01</em>
+							<em class="event-name">{{ reserva.espacio.nombre }}</em>
 						</a>
 					</li>
-
-					<li class="single-event" data-start="12:00" data-end="16:00" data-content="event-abs-circuit" data-event="event-1">
-						<a href="#0">
-							<em class="event-name">Quincho</em>
-						</a>
-					</li>
-
-					<li class="single-event" data-start="15:45" data-end="18:00"  data-content="event-yoga-1" data-event="event-3">
-						<a href="#0">
-							<em class="event-name">Sala 02</em>
-						</a>
-					</li>
+                    {% endif %}
+                {% endfor %}
 				</ul>
 			</li>
 		</ul>
-	</div>
 
+	</div>
 	<div class="event-modal">
 		<header class="header">
 			<div class="content">
@@ -191,8 +134,9 @@
 
 	<div class="cover-layer"></div>
 </div> <!-- .cd-schedule -->
+
 <script src="{% static 'js/modernizr.js' %}"></script>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.0.0/jquery.min.js"></script>
 <script src="{% static 'js/main.js' %}"></script> <!-- Resource jQuery -->
+
 {% endblock %}
-</html>
