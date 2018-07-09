@@ -4,7 +4,7 @@ from django.conf import settings
 class Articulo(models.Model):
     nombre = models.CharField(max_length=100)
     descripcion = models.TextField(max_length=1000)
-    foto = models.ImageField(upload_to='InventarioCEI/static/images', blank=True, null=True)
+    foto = models.ImageField(upload_to='articulos', blank=True, null=True)
 
     DISPONIBLE = 'DIS'
     ENPRESTAMO = 'PRS'
