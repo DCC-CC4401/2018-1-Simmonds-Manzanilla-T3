@@ -2,11 +2,11 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="8fbcdf18-fa59-494d-b39d-780585a1d147" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/2018-1-Simmonds-Manzanilla-T3.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/2018-1-Simmonds-Manzanilla-T3.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/articulos/static/css/articulos/style.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/articulos/templates/articulos/ficha.html" beforeDir="false" afterPath="$PROJECT_DIR$/articulos/templates/articulos/ficha.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/articulos/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/articulos/views.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/articulos/templates/articulos/style.css" beforeDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -41,12 +41,46 @@
       <file leaf-file-name="ficha.html" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/articulos/templates/articulos/ficha.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="215">
-              <caret line="50" column="137" selection-start-line="50" selection-start-column="137" selection-end-line="50" selection-end-column="137" />
+            <state relative-caret-position="130">
+              <caret line="68" selection-start-line="68" selection-end-line="68" />
               <folding>
+                <element signature="e#703#729#0#HTML" expanded="true" />
                 <element signature="e#594#614#0#HTML" expanded="true" />
                 <element signature="e#667#687#0#HTML" expanded="true" />
+                <element signature="e#4855#4882#0#HTML" expanded="true" />
+                <element signature="e#1816#1855#0#HTML" expanded="true" />
+                <element signature="e#1573#1955#0#HTML" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="README.md" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/README.md">
+          <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+            <state split_layout="SPLIT">
+              <first_editor relative-caret-position="178">
+                <caret line="70" column="4" lean-forward="true" selection-start-line="70" selection-start-column="4" selection-end-line="70" selection-end-column="4" />
+              </first_editor>
+              <second_editor />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="style.css" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/articulos/static/css/articulos/style.css">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="102">
+              <caret line="6" column="13" selection-start-line="6" selection-start-column="13" selection-end-line="6" selection-end-column="13" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="forms.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/articulos/forms.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="34">
+              <caret line="2" lean-forward="true" selection-start-line="2" selection-end-line="2" />
             </state>
           </provider>
         </entry>
@@ -54,10 +88,24 @@
       <file leaf-file-name="models.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/articulos/models.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="255">
-              <caret line="37" column="4" lean-forward="true" selection-start-line="37" selection-start-column="4" selection-end-line="37" selection-end-column="4" />
+            <state relative-caret-position="119">
+              <caret line="30" column="7" lean-forward="true" selection-start-line="30" selection-start-column="7" selection-end-line="30" selection-end-column="7" />
             </state>
           </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="base.html" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/templates/base.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="153">
+              <caret line="9" column="19" selection-start-line="9" selection-start-column="19" selection-end-line="9" selection-end-column="19" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="imports.html" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/templates/imports.html">
+          <provider selected="true" editor-type-id="text-editor" />
         </entry>
       </file>
       <file leaf-file-name="poblarBaseDeDatos.py" pinned="false" current-in-tab="false">
@@ -72,8 +120,8 @@
       <file leaf-file-name="views.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/articulos/views.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="170">
-              <caret line="10" selection-start-line="10" selection-end-line="10" />
+            <state relative-caret-position="136">
+              <caret line="8" column="57" lean-forward="true" selection-start-line="8" selection-start-column="57" selection-end-line="8" selection-end-column="57" />
               <folding>
                 <element signature="e#0#35#0" expanded="true" />
               </folding>
@@ -86,8 +134,8 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="Python Script" />
         <option value="HTML File" />
+        <option value="Python Script" />
       </list>
     </option>
   </component>
@@ -135,7 +183,11 @@
         <option value="$PROJECT_DIR$/horarioEspacios/static/css/horario.css" />
         <option value="$PROJECT_DIR$/poblarBaseDeDatos.py" />
         <option value="$PROJECT_DIR$/InventarioCEI/urls.py" />
+        <option value="$PROJECT_DIR$/articulos/templates/articulos/style.css" />
+        <option value="$PROJECT_DIR$/README.md" />
         <option value="$PROJECT_DIR$/articulos/views.py" />
+        <option value="$PROJECT_DIR$/articulos/static/css/articulos/style.css" />
+        <option value="$PROJECT_DIR$/articulos/forms.py" />
         <option value="$PROJECT_DIR$/articulos/templates/articulos/ficha.html" />
       </list>
     </option>
@@ -179,20 +231,12 @@
             <path>
               <item name="2018-1-Simmonds-Manzanilla-T3" type="b2602c69:ProjectViewProjectNode" />
               <item name="2018-1-Simmonds-Manzanilla-T3" type="462c0819:PsiDirectoryNode" />
-              <item name="articulos" type="462c0819:PsiDirectoryNode" />
-              <item name="templates" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="2018-1-Simmonds-Manzanilla-T3" type="b2602c69:ProjectViewProjectNode" />
-              <item name="2018-1-Simmonds-Manzanilla-T3" type="462c0819:PsiDirectoryNode" />
-              <item name="articulos" type="462c0819:PsiDirectoryNode" />
-              <item name="templates" type="462c0819:PsiDirectoryNode" />
-              <item name="articulos" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="2018-1-Simmonds-Manzanilla-T3" type="b2602c69:ProjectViewProjectNode" />
-              <item name="2018-1-Simmonds-Manzanilla-T3" type="462c0819:PsiDirectoryNode" />
               <item name="InventarioCEI" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="2018-1-Simmonds-Manzanilla-T3" type="b2602c69:ProjectViewProjectNode" />
+              <item name="2018-1-Simmonds-Manzanilla-T3" type="462c0819:PsiDirectoryNode" />
+              <item name="templates" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -215,6 +259,7 @@
       <recent name="$PROJECT_DIR$/app" />
     </key>
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\heini\PycharmProjects\2018-1-Simmonds-Manzanilla-T3\articulos\static\css\articulos" />
       <recent name="$PROJECT_DIR$/horarioEspacios" />
       <recent name="$PROJECT_DIR$/app/templates" />
     </key>
@@ -457,25 +502,32 @@
       <option name="project" value="LOCAL" />
       <updated>1531019082592</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="mejor ficha de articulo, falta hacer que la view reciba en el request que articulo mostrar, y falta tambien hacer el calendario">
+      <created>1531098487030</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1531098487030</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="784" extended-state="6" />
-    <editor active="true" />
     <layout>
       <window_info anchor="bottom" id="TODO" order="7" />
       <window_info anchor="bottom" id="Event Log" order="10" sideWeight="0.50075644" side_tool="true" weight="0.32972136" />
       <window_info anchor="bottom" id="Database Changes" order="11" show_stripe_button="false" />
       <window_info anchor="bottom" id="Version Control" order="9" sideWeight="0.49961567" weight="0.32972136" />
       <window_info anchor="bottom" id="Python Console" order="13" weight="0.32972136" />
-      <window_info anchor="bottom" id="Run" order="3" sideWeight="0.49924356" visible="true" weight="0.32972136" />
+      <window_info anchor="bottom" id="Run" order="3" sideWeight="0.49924356" weight="0.32972136" />
       <window_info anchor="bottom" id="Terminal" order="12" sideWeight="0.49961567" weight="0.3482972" />
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.290469" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.290469" />
       <window_info anchor="bottom" id="Docker" order="8" show_stripe_button="false" />
       <window_info anchor="right" id="Database" order="3" weight="0.32980332" />
       <window_info anchor="right" id="SciView" order="4" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
+      <window_info anchor="bottom" id="Concurrent Activities Diagram" visible="true" weight="0.32972136" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Debug" order="4" weight="0.4" />
       <window_info anchor="bottom" id="Thumbnails" order="0" weight="0.3298193" />
@@ -498,23 +550,11 @@
     <MESSAGE value="schedule template" />
     <MESSAGE value="schedule template funcionando" />
     <MESSAGE value="horario nuevo" />
-    <option name="LAST_COMMIT_MESSAGE" value="horario nuevo" />
+    <MESSAGE value="mejor ficha de articulo, falta hacer que la view reciba en el request que articulo mostrar, y falta tambien hacer el calendario" />
+    <option name="LAST_COMMIT_MESSAGE" value="mejor ficha de articulo, falta hacer que la view reciba en el request que articulo mostrar, y falta tambien hacer el calendario" />
     <option name="UPDATE_GROUP_BY_PACKAGES" value="true" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/autenticacion/urls.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="144">
-          <caret line="10" column="39" selection-start-line="10" selection-start-column="39" selection-end-line="10" selection-end-column="39" />
-          <folding>
-            <element signature="e#0#28#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/horarioEspacios/apps.py">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
     <entry file="file://$USER_HOME$/Descargas/schedule-template-master/index.html" />
     <entry file="file://$PROJECT_DIR$/horarioEspacios/static/scss/style.scss" />
     <entry file="file://$PROJECT_DIR$/horarioEspacios/static/js/jquery-3.0.0.min.js">
@@ -595,9 +635,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/articulos/templates/articulos/style.css">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
     <entry file="file://$PROJECT_DIR$/espacios/views.py">
       <provider selected="true" editor-type-id="text-editor">
         <state>
@@ -667,16 +704,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/templates/imports.html">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/templates/base.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="153">
-          <caret line="9" selection-start-line="9" selection-end-line="9" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/templates/navbar.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="374">
@@ -704,14 +731,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-2423">
           <caret line="2" lean-forward="true" selection-start-line="2" selection-end-line="2" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/README.md">
-      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
-        <state split_layout="SPLIT">
-          <first_editor />
-          <second_editor />
         </state>
       </provider>
     </entry>
@@ -757,23 +776,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/articulos/views.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="170">
-          <caret line="10" selection-start-line="10" selection-end-line="10" />
-          <folding>
-            <element signature="e#0#35#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/articulos/models.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="255">
-          <caret line="37" column="4" lean-forward="true" selection-start-line="37" selection-start-column="4" selection-end-line="37" selection-end-column="4" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/poblarBaseDeDatos.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="34">
@@ -781,13 +783,75 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/articulos/templates/articulos/style.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="221">
+          <caret line="13" column="1" selection-start-line="13" selection-start-column="1" selection-end-line="13" selection-end-column="1" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/articulos/views.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="136">
+          <caret line="8" column="57" lean-forward="true" selection-start-line="8" selection-start-column="57" selection-end-line="8" selection-end-column="57" />
+          <folding>
+            <element signature="e#0#35#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/README.md">
+      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+        <state split_layout="SPLIT">
+          <first_editor relative-caret-position="178">
+            <caret line="70" column="4" lean-forward="true" selection-start-line="70" selection-start-column="4" selection-end-line="70" selection-end-column="4" />
+          </first_editor>
+          <second_editor />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/articulos/models.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="119">
+          <caret line="30" column="7" lean-forward="true" selection-start-line="30" selection-start-column="7" selection-end-line="30" selection-end-column="7" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/base.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="153">
+          <caret line="9" column="19" selection-start-line="9" selection-start-column="19" selection-end-line="9" selection-end-column="19" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/articulos/static/css/articulos/style.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="102">
+          <caret line="6" column="13" selection-start-line="6" selection-start-column="13" selection-end-line="6" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/imports.html">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/articulos/forms.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="34">
+          <caret line="2" lean-forward="true" selection-start-line="2" selection-end-line="2" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/articulos/templates/articulos/ficha.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="215">
-          <caret line="50" column="137" selection-start-line="50" selection-start-column="137" selection-end-line="50" selection-end-column="137" />
+        <state relative-caret-position="130">
+          <caret line="68" selection-start-line="68" selection-end-line="68" />
           <folding>
+            <element signature="e#703#729#0#HTML" expanded="true" />
             <element signature="e#594#614#0#HTML" expanded="true" />
             <element signature="e#667#687#0#HTML" expanded="true" />
+            <element signature="e#4855#4882#0#HTML" expanded="true" />
+            <element signature="e#1816#1855#0#HTML" expanded="true" />
+            <element signature="e#1573#1955#0#HTML" />
           </folding>
         </state>
       </provider>

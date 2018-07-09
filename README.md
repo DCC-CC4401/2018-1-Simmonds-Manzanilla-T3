@@ -58,11 +58,11 @@ Requisitos que deben implementar en forma completa: 1-2, 4-5, 7-8, 12, 14-18, 23
 
 ## Ficha de un artículo:
 
-- [ ] 37. El sistema debe mostrar la siguiente información para un artículo: nombre, foto,
+- [x] 37. El sistema debe mostrar la siguiente información para un artículo: nombre, foto,
   texto descriptivo y estado actual (disponible, en préstamo, en reparación,
   perdido).
 
-- [ ] 38. El sistema también debe mostrar un resumen de las fechas en las cuales ha sido
+- [x] 38. El sistema también debe mostrar un resumen de las fechas en las cuales ha sido
   reservado el artículo.
 
 - [ ] 39. En el caso de los administradores, el sistema debe permitir gestionar la
