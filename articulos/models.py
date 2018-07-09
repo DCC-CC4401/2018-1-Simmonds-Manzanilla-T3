@@ -23,7 +23,7 @@ class Articulo(models.Model):
     )
 
     def __str__(self):
-        return self.nombre + str(self.id)
+        return " artículo número " + str(self.id) + ": " + self.nombre
 
 
 class ReservaArticulo(models.Model):
@@ -52,3 +52,7 @@ class ReservaArticulo(models.Model):
         choices=ESTADO,
         default=PENDIENTE,
     )
+
+    def __str__(self):
+        return ("reserva de artículo número " + str(self.id) + ", usuario :" +
+         str(self.usuario.email) + ", artículo: "+ str(self.articulo))

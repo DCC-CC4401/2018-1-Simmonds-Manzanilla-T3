@@ -22,7 +22,7 @@ class Espacio(models.Model):
     )
 
     def __str__(self):
-        return self.nombre
+        return " espacio número " + str(self.id) + ": " + self.nombre
 
 
 class ReservaEspacio(models.Model):
@@ -31,8 +31,8 @@ class ReservaEspacio(models.Model):
     autorizador = models.ForeignKey(settings.AUTH_USER_MODEL, blank=True,
         on_delete=models.DO_NOTHING, limit_choices_to={'is_admin': True},
         related_name='maps')
-    inicio = models.TimeField()
-    fin = models.TimeField()
+    inicio = models.DateTimeField()
+    fin = models.DateTimeField()
     PENDIENTE = 'PEN'
     ACEPTADA = 'ACP'
     RECHAZADA = 'RCH'
@@ -47,3 +47,7 @@ class ReservaEspacio(models.Model):
     choices=ESTADO,
     default=PENDIENTE,
     )
+
+    def __str__(self):
+        return ("reserva de espacio número " + str(self.id) + ", usuario :" +
+         str(self.usuario.email) + ", espacio: "+ str(self.espacio))

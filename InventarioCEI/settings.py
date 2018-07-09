@@ -41,7 +41,7 @@ INSTALLED_APPS = [
     'espacios',
     'articulos',
     'horarioEspacios',
-    'perfilUser',
+    'perfilUsuario',
     'bootstrap4',
     ]
 
