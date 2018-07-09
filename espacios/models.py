@@ -36,10 +36,13 @@ class ReservaEspacio(models.Model):
     PENDIENTE = 'PEN'
     ACEPTADA = 'ACP'
     RECHAZADA = 'RCH'
+    TERMINADA = 'TER'
+
     ESTADO = (
     (PENDIENTE, 'Pendiente'),
     (RECHAZADA, 'Aceptada'),
     (RECHAZADA, 'Rechazada'),
+    (TERMINADA, 'Terminada'),
     )
 
     estado = models.CharField(

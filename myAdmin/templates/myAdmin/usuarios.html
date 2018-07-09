@@ -1,0 +1,33 @@
+<div class="container">
+  <h2>Usuarios</h2>
+  <table class="table table-striped">
+    <thead>
+      <tr>
+        <th>ID</th>
+        <th>Nombre</th>
+        <th>Rut</th>
+        <th>Correo</th>
+        <th>Estado</th>
+        <th>simolitos</th>
+      </tr>
+    </thead>
+    <tbody>
+{% for user in users %}
+      <tr>
+        <td>{{user.id}}</td>
+        <td>{{user.nombre}}</td>
+        <td>{{user.rut}}</td>
+        <td>{{user.email}}</td>
+        <td>
+          {% if user.is_active %}
+            <span class="badge badge-pill badge-success">Activo</span>
+          {% else %}
+            <span class="badge badge-pill badge-danger">Inactivo</span>
+          {% endif %}
+          </td>
+        <td>simbolitos</td>
+      </tr>
+      {% endfor %}
+    </tbody>
+  </table>
+</div>

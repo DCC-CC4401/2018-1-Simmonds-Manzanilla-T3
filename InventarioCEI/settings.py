@@ -43,6 +43,7 @@ INSTALLED_APPS = [
     'horarioEspacios',
     'perfilUsuario',
     'bootstrap4',
+    'myAdmin'
     ]
 
 
