@@ -12,3 +12,9 @@ class Articulo(View):
             'reservas':models.ReservaArticulo.objects.filter(articulo=mic)
         }
         return render(request,'articulos/ficha.html',arg)
+
+
+def index(request):
+    estados = models.Articulo.ESTADO
+    context = {'estados':estados,}
+    return render(request, 'articulos/landing.html', context)
