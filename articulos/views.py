@@ -2,17 +2,9 @@ from django.shortcuts import render
 from django.http import HttpResponse
 from django.views import View
 from django.db.models import Count
+from . import forms
 
 import articulos.models as models
-
-class Articulo(View):
-    def get(self,request,*args,**kwargs):
-        mic = models.Articulo.objects.filter(nombre='micrófono1').first()
-        arg = {
-            'articulo':mic,
-            'reservas':models.ReservaArticulo.objects.filter(articulo=mic)
-        }
-        return render(request,'articulos/ficha.html',arg)
 
 
 def index(request):
@@ -38,9 +30,25 @@ def search(request):
 def ficha(request):
     if request.method == 'GET':
         art_id = request.GET.get('fichart')
+        form = forms.reservaForm()
         art = models.Articulo.objects.get(id=art_id)
         context = {'articulo': art,
-                   'reservas': models.ReservaArticulo.objects.filter(articulo=art)}
+                   'reservas': models.ReservaArticulo.objects.filter(articulo=art),
+                   'reservaForm': form
+                   }
+        return render(request, 'articulos/ficha.html', context)
+    else:
+        art_id = request.POST.get('fichart')
+        form = forms.reservaForm(request.POST)
+        art = models.Articulo.objects.get(id=art_id)
+        context = {'articulo': art,
+                   'reservas': models.ReservaArticulo.objects.filter(articulo=art),
+                   'reservaForm': form
+                   }
+        if form.is_valid():
+            print('ok form')
+        else:
+            print('form not valid')
         return render(request, 'articulos/ficha.html', context)
 
 

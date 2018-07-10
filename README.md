@@ -68,7 +68,7 @@ Requisitos que deben implementar en forma completa: 1-2, 4-5, 7-8, 12, 14-18, 23
 - [ ] 39. En el caso de los administradores, el sistema debe permitir gestionar la
   información de un artículo.
 
-- [ ] 40. En el caso de una persona natural, el sistema debe permitirle al usuario indicar
+- [x] 40. En el caso de una persona natural, el sistema debe permitirle al usuario indicar
   que quiere reservar el artículo, indicando el rango de fecha y horas del préstamo
   solicitado.
 

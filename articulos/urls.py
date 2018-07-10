@@ -6,6 +6,4 @@ urlpatterns = [
     path('', views.index, name='busquedaArticulos'),
     path('search', views.search, name='search'),
     path('ficha', views.ficha, name='ficha'),
-
-    #path('', views.Articulo.as_view()),
 ]
