@@ -1,106 +1,106 @@
 <div class= "row">
-<div class="container col">
-  <h2>Articulos</h2>
-  <table class="table table-striped">
-    <thead>
-      <tr>
-        <th>ID</th>
-        <th>Articulo</th>
-        <th>Estado</th>
-        <th>
-        </th>
-      </tr>
-    </thead>
-    <tbody>
-{% for reserva_articulo in articulos_reservados %}
-      <tr>
-        <td>{{reserva_articulo.id}}</td>
-        <td>{{reserva_articulo.articulo.nombre}}</td>
-        <td>
-          {% if reserva_articulo.get_estado_display == "Pendiente" %}
-          <span class="badge badge-pill badge-warning">Pendiente</span>
-          {% endif %}
-          {% if reserva_articulo.get_estado_display == "Aceptado" %}
-          <span class="badge badge-pill badge-success">Aceptado</span>
-          {% endif %}
-          {% if reserva_articulo.get_estado_display == "Rechazado" %}
-          <span class="badge badge-pill badge-dark">Rechazado</span>
-          {% endif %}
-          {% if reserva_articulo.get_estado_display == "Devuelto" %}
-          <span class="badge badge-pill badge-secondary">Devuelto</span>
-          {% endif %}
-          {% if reserva_articulo.get_estado_display == "No devuelto" %}
-          <span class="badge badge-pill badge-danger">No Devuelto</span>
-          {% endif %}
-        </td>
-        <td class="justify-content-between">
-          <div class="input-group-prepend col-1 px-2">
-            <input type="checkbox" name="check_reserva_articulo{{forloop.counter0}}">
-          </div>
-        </td>
-      </tr>
-      {% endfor %}
-    </tbody>
-  </table>
-  <div class ="d-flex justify-content-end">
-  <button type="submit" class="btn badge-pill badge-danger">
-    <i class="fa fa-times p-1" aria-hidden="true"></i>
-    Rechazar
-  </button>
-  <button type="submit" class="btn badge-pill badge-success">
-    <i class="fa fa-check p-1" aria-hidden="true"></i>
-    Aceptar
-  </button>
-</div>
-</div>
-<div class="container col">
-  <h2>Espacios</h2>
-  <table class="table table-striped">
-    <thead>
-      <tr>
-        <th>ID</th>
-        <th>Espacio</th>
-        <th>Estado</th>
-        <th>
-        </th>
-      </tr>
-    </thead>
-    <tbody>
-{% for reserva_espacio in espacios_reservados %}
-      <tr>
-        <td>{{reserva_espacio.id}}</td>
-        <td>{{reserva_espacio.espacio.nombre}}</td>
-        <td>
-          {% if reserva_espacio.get_estado_display == "Pendiente" %}
-          <span class="badge badge-pill badge-warning">Pendiente</span>
-          {% endif %}
-          {% if reserva_espacio.get_estado_display == "Aceptada" %}
-          <span class="badge badge-pill badge-success">Aceptada</span>
-          {% endif %}
-          {% if reserva_espacio.get_estado_display == "Rechazada" %}
-          <span class="badge badge-pill badge-dark">Rechazada</span>
-          {% endif %}
-          {% if reserva_espacio.get_estado_display == "Terminada" %}
-          <span class="badge badge-pill badge-secondary">Terminada</span>
-          {% endif %}
-        </td>
-        <td class="justify-content-between">
-          <div class="input-group-prepend col-1 px-2">
-            <input type="checkbox" name="check_reserva_espacio{{forloop.counter0}}">
-          </div>
-        </td>
-      </tr>
-      {% endfor %}
-    </tbody>
-  </table>
-  <div class ="d-flex justify-content-end">
-  <button type="submit" class="btn badge-pill badge-danger ">
-    <i class="fa fa-times p-1" aria-hidden="true"></i>
-    Rechazar
-  </button>
-  <button type="submit" class="btn badge-pill badge-success">
-    <i class="fa fa-check p-1" aria-hidden="true"></i>
-    Aceptar
-  </button>
-</div>
-</div>
+  <div class="container col">
+    <h2>Articulos</h2>
+    <table class="table table-striped">
+      <thead>
+        <tr>
+          <th>ID</th>
+          <th>Articulo</th>
+          <th>Estado</th>
+          <th>
+          </th>
+        </tr>
+      </thead>
+      <tbody>
+        {% for reserva_articulo in articulos_reservados %}
+        <tr>
+          <td>{{reserva_articulo.id}}</td>
+          <td>{{reserva_articulo.articulo.nombre}}</td>
+          <td>
+            {% if reserva_articulo.get_estado_display == "Pendiente" %}
+            <span class="badge badge-pill badge-warning">Pendiente</span>
+            {% endif %}
+            {% if reserva_articulo.get_estado_display == "Aceptado" %}
+            <span class="badge badge-pill badge-success">Aceptado</span>
+            {% endif %}
+            {% if reserva_articulo.get_estado_display == "Rechazado" %}
+            <span class="badge badge-pill badge-dark">Rechazado</span>
+            {% endif %}
+            {% if reserva_articulo.get_estado_display == "Devuelto" %}
+            <span class="badge badge-pill badge-secondary">Devuelto</span>
+            {% endif %}
+            {% if reserva_articulo.get_estado_display == "No devuelto" %}
+            <span class="badge badge-pill badge-danger">No Devuelto</span>
+            {% endif %}
+          </td>
+          <td class="justify-content-between">
+            <div class="input-group-prepend col-1 px-2">
+              <input type="checkbox" name="res_articulos{{forloop.counter0}}">
+            </div>
+          </td>
+        </tr>
+        {% endfor %}
+      </tbody>
+    </table>
+    <div class ="d-flex justify-content-end">
+      <button type="submit" class="btn badge-pill badge-danger" name="rechazar_articulos">
+        <i class="fa fa-times p-1" aria-hidden="true"></i>
+        Rechazar
+      </button>
+      <button type="submit" class="btn badge-pill badge-success" name="aceptar_articulos">
+        <i class="fa fa-check p-1" aria-hidden="true"></i>
+        Aceptar
+      </button>
+    </div>
+  </div>
+  <div class="container col">
+    <h2>Espacios</h2>
+    <table class="table table-striped">
+      <thead>
+        <tr>
+          <th>ID</th>
+          <th>Espacio</th>
+          <th>Estado</th>
+          <th>
+          </th>
+        </tr>
+      </thead>
+      <tbody>
+        {% for reserva_espacio in espacios_reservados %}
+        <tr>
+          <td>{{reserva_espacio.id}}</td>
+          <td>{{reserva_espacio.espacio.nombre}}</td>
+          <td>
+            {% if reserva_espacio.get_estado_display == "Pendiente" %}
+            <span class="badge badge-pill badge-warning">Pendiente</span>
+            {% endif %}
+            {% if reserva_espacio.get_estado_display == "Aceptada" %}
+            <span class="badge badge-pill badge-success">Aceptada</span>
+            {% endif %}
+            {% if reserva_espacio.get_estado_display == "Rechazada" %}
+            <span class="badge badge-pill badge-dark">Rechazada</span>
+            {% endif %}
+            {% if reserva_espacio.get_estado_display == "Terminada" %}
+            <span class="badge badge-pill badge-secondary">Terminada</span>
+            {% endif %}
+          </td>
+          <td class="justify-content-between">
+            <div class="input-group-prepend col-1 px-2">
+              <input type="checkbox" name="res_espacios{{forloop.counter0}}">
+            </div>
+          </td>
+        </tr>
+        {% endfor %}
+      </tbody>
+    </table>
+    <div class ="d-flex justify-content-end">
+      <button type="submit" class="btn badge-pill badge-danger" name="rechazar_espacios">
+        <i class="fa fa-times p-1" aria-hidden="true"></i>
+        Rechazar
+      </button>
+      <button type="submit" class="btn badge-pill badge-success" name="aceptar_espacios">
+        <i class="fa fa-check p-1" aria-hidden="true"></i>
+        Aceptar
+      </button>
+    </div>
+  </div>

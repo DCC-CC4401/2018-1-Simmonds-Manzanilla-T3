@@ -22,4 +22,34 @@ def landingPageAdmin(request):
         'articulos_reservados' : articulos_reservados,
         'espacios_reservados' : espacios_reservados,
     }
+    if request.method == 'POST':
+        if 'rechazar_articulos' in request.POST:
+            for req in request.POST:
+                if 'res_articulos' in req:
+                    numero=int(req[13:])
+                    reserva_a_cambiar = articulos_reservados[numero]
+                    reserva_a_cambiar.estado = ReservaArticulo.RECHAZADO
+                    reserva_a_cambiar.save()
+        if 'aceptar_articulos' in request.POST:
+            for req in request.POST:
+                if 'res_articulos' in req:
+                    numero=int(req[13:])
+                    reserva_a_cambiar = articulos_reservados[numero]
+                    reserva_a_cambiar.estado = ReservaArticulo.ACEPTADO
+                    reserva_a_cambiar.save()
+        if 'aceptar_espacios' in request.POST:
+            for req in request.POST:
+                if 'res_espacios' in req:
+                    numero=int(req[12:])
+                    reserva_a_cambiar=espacios_reservados[numero]
+                    reserva_a_cambiar.estado= ReservaArticulo.RECHAZADO
+                    reserva_a_cambiar.save()
+        if 'rechazar_espacios' in request.POST:
+            for req in request.POST:
+                if 'res_articulos' in req:
+                    numero=int(req[13:])
+                    reserva_a_cambiar=espacios_reservados[numero]
+                    reserva_a_cambiar.estado= ReservaArticulo.ACEPTADO
+                    reserva_a_cambiar.save()
+
     return render(request, 'myAdmin/landingPageAdmin.html', context)

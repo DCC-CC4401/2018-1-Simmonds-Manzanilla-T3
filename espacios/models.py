@@ -1,5 +1,6 @@
 from django.db import models
 from django.conf import settings
+from datetime import datetime
 
 
 class Espacio(models.Model):
@@ -50,6 +51,11 @@ class ReservaEspacio(models.Model):
     choices=ESTADO,
     default=PENDIENTE,
     )
+
+    def actualizar(self):
+        if self.fin < datetime.now() and self.estado == ACEPTADA:
+            self.estado=TERMINADA
+
 
     def __str__(self):
         return ("reserva de espacio número " + str(self.id) + ", usuario :" +

@@ -15,10 +15,10 @@ Requisitos que deben implementar en forma completa: 1-2, 4-5, 7-8, 12, 14-18, 23
 
 - [ ] 5. El sistema debe permitir que personas naturales realicen reservas de artículos.
 
-- [ ] 7. El sistema debe llevar un historial de las reservas realizadas por una persona
+- [x] 7. El sistema debe llevar un historial de las reservas realizadas por una persona
   natural, registrándose el usuario, fecha y hora de la reserva.
 
-- [ ] 8. El sistema debe llevar un historial de los préstamos autorizados por un
+- [x] 8. El sistema debe llevar un historial de los préstamos autorizados por un
   administrador, registrándose el usuario, fecha y hora del préstamo.
 
 - [ ] 12. La reserva de cualquier artículo debe realizarse al menos 1 hora antes de la
@@ -27,7 +27,7 @@ Requisitos que deben implementar en forma completa: 1-2, 4-5, 7-8, 12, 14-18, 23
 - [ ] 14. Solo se puede reservar artículos y espacios en días hábiles, en el horario 09:00 -
   18:00.
 
-- [ ] 15. Cada artículo y espacio debe tener un identificador único en el sistema.
+- [x] 15. Cada artículo y espacio debe tener un identificador único en el sistema.
 
 
 ## Landing page para personas naturales:
@@ -74,15 +74,15 @@ Requisitos que deben implementar en forma completa: 1-2, 4-5, 7-8, 12, 14-18, 23
 
 ## Landing page para administradores:
 
-- [ ] 51. El sistema debe mostrar una grilla con los horarios en que están reservadas los
+- [x] 51. El sistema debe mostrar una grilla con los horarios en que están reservadas los
   espacios administrados por el CEI.  
 
-- [ ] 54. El sistema debe mostrar un listado de todas las reservas pendientes en el
+- [x] 54. El sistema debe mostrar un listado de todas las reservas pendientes en el
   sistema, ordenados por fecha (más nuevos al inicio de la lista).
 
-- [ ] 55. El sistema debe permitir que el administrador marque una o más reservas
+- [x] 55. El sistema debe permitir que el administrador marque una o más reservas
   pendientes, pudiendo cambiar su estado a entregado o rechazado.
 
-- [ ] 56. El sistema debe mostrar un listado de todas los préstamos en el sistema,
+- [x] 56. El sistema debe mostrar un listado de todas los préstamos en el sistema,
   ordenados por fecha (más nuevos al inicio de la lista). El sistema debe permitir
   filtrar los préstamos por estado (vigentes, caducados, perdidos).
