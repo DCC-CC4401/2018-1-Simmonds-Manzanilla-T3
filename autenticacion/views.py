@@ -62,15 +62,7 @@ def login_view(request):
 	}
 	return render(request, 'autenticacion/login.html', context)
 
-
-def login_succes(request):
-	return render(request, 'autenticacion/login_succes.html')
-
 @login_required
 def logout_view(request):
 	logout(request)
 	return render(request,'autenticacion/logout_succes.html')
-
-
-def logout_succes(request):
-	return render(request, 'autenticacion/logout_succes.html')

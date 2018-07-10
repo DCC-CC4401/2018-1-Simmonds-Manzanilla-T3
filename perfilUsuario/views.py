@@ -3,6 +3,14 @@ from django.contrib.auth.decorators import login_required
 from espacios.models import ReservaEspacio
 from articulos.models import ReservaArticulo
 
+@login_required
+def home(request):
+    usuario = request.user
+    if usuario.is_admin:
+        redirect('landingPageAdmin')
+    else:
+        redirect('perfil')
+        
 
 @login_required
 def informacionUsuario(request):
