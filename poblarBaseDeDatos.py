@@ -20,19 +20,19 @@ def agregado_a_DB(string):
   return
 
 # Definiendo los artículos y guardandolos en la base de datos.
-microfono = Articulo(nombre= "micrófono1", descripcion="modelo e2019, buen estado", foto= 'static/images/microfono1.jpg')
+microfono = Articulo(nombre= "micrófono1", descripcion="modelo e2019, buen estado", foto= 'articulos/microfono1.jpg')
 microfono.save()
 agregado_a_DB("microfono")
-parlante = Articulo(nombre="parlante1", descripcion="modelo h1.23, entrada auxiliar mala", foto= 'static/images/parlante.jpg')
+parlante = Articulo(nombre="parlante1", descripcion="modelo h1.23, entrada auxiliar mala", foto= 'articulos/parlante.jpg')
 parlante.save()
 agregado_a_DB("parlante")
-equipo_musica = Articulo(nombre="equipo de musica", descripcion="equipo sony ultra mix v2, nuevo", foto= 'static/images/equipoMusica.jpeg')
+equipo_musica = Articulo(nombre="equipo de musica", descripcion="equipo sony ultra mix v2, nuevo", foto= 'articulos/equipoMusica.jpeg')
 equipo_musica.save()
 agregado_a_DB("equipo de msica")
-parrilla = Articulo(nombre="parrilla", descripcion="parrilla de asados, le falta una pata, grande", foto= 'static/images/parrilla.jpg')
+parrilla = Articulo(nombre="parrilla", descripcion="parrilla de asados, le falta una pata, grande", foto= 'articulos/parrilla.jpg')
 parrilla.save()
 agregado_a_DB("parrilla")
-cable = Articulo(nombre="cable plug", descripcion="cable de 20m, para microfonos, guitarras, etc.", foto= 'static/images/cable.jpeg')
+cable = Articulo(nombre="cable plug", descripcion="cable de 20m, para microfonos, guitarras, etc.", foto= 'articulos/cable.jpeg')
 cable.save()
 agregado_a_DB("cable")
 
