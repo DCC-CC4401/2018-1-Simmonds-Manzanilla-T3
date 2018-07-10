@@ -64,14 +64,15 @@
 	<div class="row">
         {% for product in search %}
 	    <div class="col-md-3">
-        <a style="text-decoration: none" href="#">
-        <div class="card" style="width: 18rem;">
+        <form id="{{ product.nombre }}" action="{% url 'ficha' %}" method="get">
+        <input type="hidden" value="{{ product.id }}"  name="fichart">
+        <div class="card" style="width: 18rem;" onclick="document.forms['{{ product.nombre }}'].submit();">
         <img class="card-img-top" src="{{ product.foto.url }}" alt="{{ product.nombre }}">
         <div class="card-body mx-auto">
           <p class="card-text">{{ product.nombre }}</p>
         </div>
         </div>
-        </a>
+        </form>
       </div>
         {% endfor %}
     </div>
@@ -85,14 +86,15 @@
 	<div class="row">
         {% for product in top4 %}
 	    <div class="col-md-3">
-        <a style="text-decoration: none" href="#">
-        <div class="card" style="width: 18rem;">
+        <form id="{{ product.nombre }}t" action="{% url 'ficha' %}" method="get">
+        <input type="hidden" value="{{ product.id }}"  name="fichart">
+        <div class="card" style="width: 18rem;" onclick="document.forms['{{ product.nombre }}t'].submit();">
         <img class="card-img-top" src="{{ product.foto.url }}" alt="{{ product.nombre }}">
         <div class="card-body mx-auto">
           <p class="card-text">{{ product.nombre }}</p>
         </div>
         </div>
-        </a>
+        </form>
       </div>
         {% endfor %}
     </div>
