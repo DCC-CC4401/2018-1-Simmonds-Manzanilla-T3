@@ -10,7 +10,7 @@
   <nav class="navbar navbar-expand-lg">
   <ul class="navbar-nav ml-auto mr-auto nav-fill w-30">
     <li class="nav-item">
-      <a href="#" role="button" class="btn btn-primary">
+      <a href="{% url 'busquedaArticulos' %}" role="button" class="btn btn-primary">
         Articulos
       </a>
     </li>
@@ -62,16 +62,39 @@
 
   <div class="container">
 	<div class="row">
-	  <div class="col-md-5">
         {% for product in search %}
+	    <div class="col-md-3">
+        <a style="text-decoration: none" href="#">
         <div class="card" style="width: 18rem;">
-        <img class="card-img-top" src="{{ product.foto.url }}" alt="Card image cap">
-        <div class="card-body">
+        <img class="card-img-top" src="{{ product.foto.url }}" alt="{{ product.nombre }}">
+        <div class="card-body mx-auto">
           <p class="card-text">{{ product.nombre }}</p>
         </div>
         </div>
-        {% endfor %}
+        </a>
       </div>
+        {% endfor %}
+    </div>
+  </div>
+
+  <hr/>
+
+  <h2>Top pedidos</h2>
+
+  <div class="container">
+	<div class="row">
+        {% for product in top4 %}
+	    <div class="col-md-3">
+        <a style="text-decoration: none" href="#">
+        <div class="card" style="width: 18rem;">
+        <img class="card-img-top" src="{{ product.foto.url }}" alt="{{ product.nombre }}">
+        <div class="card-body mx-auto">
+          <p class="card-text">{{ product.nombre }}</p>
+        </div>
+        </div>
+        </a>
+      </div>
+        {% endfor %}
     </div>
   </div>
 
