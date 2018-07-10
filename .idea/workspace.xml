@@ -2,11 +2,12 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="8fbcdf18-fa59-494d-b39d-780585a1d147" name="Default" comment="">
-      <change afterPath="$PROJECT_DIR$/articulos/static/css/articulos/style.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/articulos/templates/articulos/ficha.html" beforeDir="false" afterPath="$PROJECT_DIR$/articulos/templates/articulos/ficha.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/articulos/templates/articulos/style.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/db.sqlite3" beforeDir="false" afterPath="$PROJECT_DIR$/db.sqlite3" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/horarioEspacios/static/css/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/horarioEspacios/static/css/style.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/horarioEspacios/templates/horario.html" beforeDir="false" afterPath="$PROJECT_DIR$/horarioEspacios/templates/horario.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/horarioEspacios/templates/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/horarioEspacios/templates/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/horarioEspacios/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/horarioEspacios/views.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -16,8 +17,8 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="CoverageDataManager">
-    <SUITE FILE_PATH="coverage/2018_1_Simmonds_Manzanilla_T3$models.coverage" NAME="models Coverage Results" MODIFIED="1525742667856" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/app" />
     <SUITE FILE_PATH="coverage/2018_1_Simmonds_Manzanilla_T3$settings.coverage" NAME="settings Coverage Results" MODIFIED="1525742741083" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/InventarioCEI" />
+    <SUITE FILE_PATH="coverage/2018_1_Simmonds_Manzanilla_T3$models.coverage" NAME="models Coverage Results" MODIFIED="1525742667856" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/app" />
   </component>
   <component name="DatabaseView">
     <option name="SHOW_INTERMEDIATE" value="true" />
@@ -38,92 +39,101 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="ficha.html" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/articulos/templates/articulos/ficha.html">
+      <file leaf-file-name="poblarBaseDeDatos.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/poblarBaseDeDatos.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="130">
-              <caret line="68" selection-start-line="68" selection-end-line="68" />
+            <state relative-caret-position="-1224">
+              <caret line="4" lean-forward="true" selection-start-line="4" selection-end-line="4" />
               <folding>
-                <element signature="e#703#729#0#HTML" expanded="true" />
-                <element signature="e#594#614#0#HTML" expanded="true" />
-                <element signature="e#667#687#0#HTML" expanded="true" />
-                <element signature="e#4855#4882#0#HTML" expanded="true" />
-                <element signature="e#1816#1855#0#HTML" expanded="true" />
-                <element signature="e#1573#1955#0#HTML" />
+                <element signature="e#119#158#0" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="README.md" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/README.md">
-          <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
-            <state split_layout="SPLIT">
-              <first_editor relative-caret-position="178">
-                <caret line="70" column="4" lean-forward="true" selection-start-line="70" selection-start-column="4" selection-end-line="70" selection-end-column="4" />
-              </first_editor>
-              <second_editor />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="style.css" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/articulos/static/css/articulos/style.css">
+      <file leaf-file-name="horario.html" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/horarioEspacios/templates/horario.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="102">
-              <caret line="6" column="13" selection-start-line="6" selection-start-column="13" selection-end-line="6" selection-end-column="13" />
+            <state relative-caret-position="252">
+              <caret line="14" column="22" lean-forward="true" selection-start-line="14" selection-start-column="22" selection-end-line="14" selection-end-column="22" />
+              <folding>
+                <element signature="n#style#0;n#li#1;n#ul#0;n#div#0;n#div#0;n#!!top" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="forms.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/articulos/forms.py">
+      <file leaf-file-name="index.html" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/horarioEspacios/templates/index.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="34">
-              <caret line="2" lean-forward="true" selection-start-line="2" selection-end-line="2" />
+            <state relative-caret-position="270">
+              <caret line="15" column="50" selection-start-line="15" selection-start-column="50" selection-end-line="15" selection-end-column="50" />
+              <folding>
+                <element signature="n#style#0;n#li#0;n#ul#0;n#li#0;n#ul#0;n#div#1;n#div#0;n#!!top" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="models.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/articulos/models.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="119">
-              <caret line="30" column="7" lean-forward="true" selection-start-line="30" selection-start-column="7" selection-end-line="30" selection-end-column="7" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="base.html" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/templates/base.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="153">
-              <caret line="9" column="19" selection-start-line="9" selection-start-column="19" selection-end-line="9" selection-end-column="19" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="imports.html" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/templates/imports.html">
+      <file leaf-file-name="nav_reservas_articulos.html" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/perfilUsuario/templates/perfilUsuario/nav_reservas_articulos.html">
           <provider selected="true" editor-type-id="text-editor" />
         </entry>
       </file>
-      <file leaf-file-name="poblarBaseDeDatos.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/poblarBaseDeDatos.py">
+      <file leaf-file-name="perfilUsuario.html" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/perfilUsuario/templates/perfilUsuario/perfilUsuario.html">
+          <provider selected="true" editor-type-id="text-editor" />
+        </entry>
+      </file>
+      <file leaf-file-name="botonesHacerReserva.html" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/perfilUsuario/templates/perfilUsuario/botonesHacerReserva.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="34">
-              <caret line="65" column="18" lean-forward="true" selection-start-line="65" selection-start-column="18" selection-end-line="65" selection-end-column="18" />
+            <state>
+              <caret selection-end-column="26" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="views.py" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/horarioEspacios/views.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="199">
+              <caret line="12" column="30" selection-start-line="12" selection-start-column="30" selection-end-line="12" selection-end-column="30" />
+              <folding>
+                <element signature="e#0#35#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
       </file>
       <file leaf-file-name="views.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/articulos/views.py">
+        <entry file="file://$PROJECT_DIR$/espacios/views.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="136">
-              <caret line="8" column="57" lean-forward="true" selection-start-line="8" selection-start-column="57" selection-end-line="8" selection-end-column="57" />
+            <state>
+              <caret column="35" lean-forward="true" selection-start-column="35" selection-end-column="35" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="models.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/horarioEspacios/models.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="54">
+              <caret line="3" selection-start-line="3" selection-end-line="3" />
               <folding>
-                <element signature="e#0#35#0" expanded="true" />
+                <element signature="e#0#28#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="models.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/espacios/models.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="162">
+              <caret line="33" column="16" lean-forward="true" selection-start-line="33" selection-start-column="16" selection-end-line="33" selection-end-column="16" />
+              <folding>
+                <element signature="e#0#28#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -142,6 +152,7 @@
   <component name="FindInProjectRecents">
     <findStrings>
       <find>event-rowing-workout</find>
+      <find>single</find>
     </findStrings>
     <replaceStrings>
       <replace />
@@ -172,14 +183,10 @@
         <option value="$PROJECT_DIR$/prestamos/models.py" />
         <option value="$PROJECT_DIR$/horarioEspacios/models.py" />
         <option value="$PROJECT_DIR$/horarioEspacios/static/css/reset.css" />
-        <option value="$PROJECT_DIR$/horarioEspacios/static/css/style.css" />
         <option value="$PROJECT_DIR$/InventarioCEI/settings.py" />
-        <option value="$PROJECT_DIR$/horarioEspacios/templates/index.html" />
         <option value="$PROJECT_DIR$/horarioEspacios/urls.py" />
-        <option value="$PROJECT_DIR$/horarioEspacios/views.py" />
         <option value="$PROJECT_DIR$/espacios/models.py" />
         <option value="$PROJECT_DIR$/perfilUser/templates/perfilUser/reservasUsuario.html" />
-        <option value="$PROJECT_DIR$/horarioEspacios/templates/horario.html" />
         <option value="$PROJECT_DIR$/horarioEspacios/static/css/horario.css" />
         <option value="$PROJECT_DIR$/poblarBaseDeDatos.py" />
         <option value="$PROJECT_DIR$/InventarioCEI/urls.py" />
@@ -189,6 +196,11 @@
         <option value="$PROJECT_DIR$/articulos/static/css/articulos/style.css" />
         <option value="$PROJECT_DIR$/articulos/forms.py" />
         <option value="$PROJECT_DIR$/articulos/templates/articulos/ficha.html" />
+        <option value="$PROJECT_DIR$/horarioEspacios/templates/horario.html" />
+        <option value="$PROJECT_DIR$/horarioEspacios/static/css/style.css" />
+        <option value="$PROJECT_DIR$/perfilUsuario/templates/perfilUsuario/botonesHacerReserva.html" />
+        <option value="$PROJECT_DIR$/horarioEspacios/templates/index.html" />
+        <option value="$PROJECT_DIR$/horarioEspacios/views.py" />
       </list>
     </option>
   </component>
@@ -202,10 +214,10 @@
     <packageJsonPaths />
   </component>
   <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="69" />
-    <option name="y" value="-4" />
-    <option name="width" value="1297" />
-    <option name="height" value="756" />
+    <option name="x" value="20" />
+    <option name="y" value="385" />
+    <option name="width" value="1295" />
+    <option name="height" value="748" />
   </component>
   <component name="ProjectLevelVcsManager">
     <ConfirmationsSetting value="1" id="Add" />
@@ -215,7 +227,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -231,7 +242,72 @@
             <path>
               <item name="2018-1-Simmonds-Manzanilla-T3" type="b2602c69:ProjectViewProjectNode" />
               <item name="2018-1-Simmonds-Manzanilla-T3" type="462c0819:PsiDirectoryNode" />
+              <item name="articulos" type="462c0819:PsiDirectoryNode" />
+              <item name="templates" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="2018-1-Simmonds-Manzanilla-T3" type="b2602c69:ProjectViewProjectNode" />
+              <item name="2018-1-Simmonds-Manzanilla-T3" type="462c0819:PsiDirectoryNode" />
+              <item name="articulos" type="462c0819:PsiDirectoryNode" />
+              <item name="templates" type="462c0819:PsiDirectoryNode" />
+              <item name="articulos" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="2018-1-Simmonds-Manzanilla-T3" type="b2602c69:ProjectViewProjectNode" />
+              <item name="2018-1-Simmonds-Manzanilla-T3" type="462c0819:PsiDirectoryNode" />
+              <item name="espacios" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="2018-1-Simmonds-Manzanilla-T3" type="b2602c69:ProjectViewProjectNode" />
+              <item name="2018-1-Simmonds-Manzanilla-T3" type="462c0819:PsiDirectoryNode" />
+              <item name="horarioEspacios" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="2018-1-Simmonds-Manzanilla-T3" type="b2602c69:ProjectViewProjectNode" />
+              <item name="2018-1-Simmonds-Manzanilla-T3" type="462c0819:PsiDirectoryNode" />
+              <item name="horarioEspacios" type="462c0819:PsiDirectoryNode" />
+              <item name="static" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="2018-1-Simmonds-Manzanilla-T3" type="b2602c69:ProjectViewProjectNode" />
+              <item name="2018-1-Simmonds-Manzanilla-T3" type="462c0819:PsiDirectoryNode" />
+              <item name="horarioEspacios" type="462c0819:PsiDirectoryNode" />
+              <item name="static" type="462c0819:PsiDirectoryNode" />
+              <item name="css" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="2018-1-Simmonds-Manzanilla-T3" type="b2602c69:ProjectViewProjectNode" />
+              <item name="2018-1-Simmonds-Manzanilla-T3" type="462c0819:PsiDirectoryNode" />
+              <item name="horarioEspacios" type="462c0819:PsiDirectoryNode" />
+              <item name="templates" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="2018-1-Simmonds-Manzanilla-T3" type="b2602c69:ProjectViewProjectNode" />
+              <item name="2018-1-Simmonds-Manzanilla-T3" type="462c0819:PsiDirectoryNode" />
               <item name="InventarioCEI" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="2018-1-Simmonds-Manzanilla-T3" type="b2602c69:ProjectViewProjectNode" />
+              <item name="2018-1-Simmonds-Manzanilla-T3" type="462c0819:PsiDirectoryNode" />
+              <item name="perfilUser" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="2018-1-Simmonds-Manzanilla-T3" type="b2602c69:ProjectViewProjectNode" />
+              <item name="2018-1-Simmonds-Manzanilla-T3" type="462c0819:PsiDirectoryNode" />
+              <item name="perfilUsuario" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="2018-1-Simmonds-Manzanilla-T3" type="b2602c69:ProjectViewProjectNode" />
+              <item name="2018-1-Simmonds-Manzanilla-T3" type="462c0819:PsiDirectoryNode" />
+              <item name="perfilUsuario" type="462c0819:PsiDirectoryNode" />
+              <item name="templates" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="2018-1-Simmonds-Manzanilla-T3" type="b2602c69:ProjectViewProjectNode" />
+              <item name="2018-1-Simmonds-Manzanilla-T3" type="462c0819:PsiDirectoryNode" />
+              <item name="perfilUsuario" type="462c0819:PsiDirectoryNode" />
+              <item name="templates" type="462c0819:PsiDirectoryNode" />
+              <item name="perfilUsuario" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="2018-1-Simmonds-Manzanilla-T3" type="b2602c69:ProjectViewProjectNode" />
@@ -242,6 +318,7 @@
           <select />
         </subPane>
       </pane>
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -263,124 +340,6 @@
       <recent name="$PROJECT_DIR$/horarioEspacios" />
       <recent name="$PROJECT_DIR$/app/templates" />
     </key>
-  </component>
-  <component name="RestoreUpdateTree" date="Moments ago" ActionInfo="_Update">
-    <UpdatedFiles>
-      <FILE-GROUP>
-        <option name="myUpdateName" value="Updated from server" />
-        <option name="myStatusName" value="Changed on server" />
-        <option name="mySupportsDeletion" value="false" />
-        <option name="myCanBeAbsent" value="false" />
-        <option name="myId" value="CHANGED_ON_SERVER" />
-        <FILE-GROUP>
-          <option name="myUpdateName" value="Updated" />
-          <option name="myStatusName" value="Changed" />
-          <option name="mySupportsDeletion" value="false" />
-          <option name="myCanBeAbsent" value="false" />
-          <option name="myId" value="UPDATED" />
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/InventarioCEI/__pycache__/settings.cpython-35.pyc</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/README.md</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/db.sqlite3</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/perfilUser/templates/perfilUser/nav_reservas_articulos.html</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/perfilUser/templates/perfilUser/nav_reservas_espacios.html</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/perfilUser/views.py</PATH>
-        </FILE-GROUP>
-        <FILE-GROUP>
-          <option name="myUpdateName" value="Created" />
-          <option name="myStatusName" value="Created" />
-          <option name="mySupportsDeletion" value="false" />
-          <option name="myCanBeAbsent" value="false" />
-          <option name="myId" value="CREATED" />
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/espacios/migrations/0003_auto_20180708_1853.py</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/poblarBaseDeDatos.py</PATH>
-        </FILE-GROUP>
-        <FILE-GROUP>
-          <option name="myUpdateName" value="Deleted" />
-          <option name="myStatusName" value="Deleted" />
-          <option name="mySupportsDeletion" value="false" />
-          <option name="myCanBeAbsent" value="true" />
-          <option name="myId" value="REMOVED_FROM_REPOSITORY" />
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/poblarBaseDeDatos</PATH>
-        </FILE-GROUP>
-        <FILE-GROUP>
-          <option name="myUpdateName" value="Restored" />
-          <option name="myStatusName" value="Will be restored" />
-          <option name="mySupportsDeletion" value="false" />
-          <option name="myCanBeAbsent" value="false" />
-          <option name="myId" value="RESTORED" />
-        </FILE-GROUP>
-      </FILE-GROUP>
-      <FILE-GROUP>
-        <option name="myUpdateName" value="Modified" />
-        <option name="myStatusName" value="Modified" />
-        <option name="mySupportsDeletion" value="false" />
-        <option name="myCanBeAbsent" value="false" />
-        <option name="myId" value="MODIFIED" />
-      </FILE-GROUP>
-      <FILE-GROUP>
-        <option name="myUpdateName" value="Skipped" />
-        <option name="myStatusName" value="Skipped" />
-        <option name="mySupportsDeletion" value="false" />
-        <option name="myCanBeAbsent" value="false" />
-        <option name="myId" value="SKIPPED" />
-      </FILE-GROUP>
-      <FILE-GROUP>
-        <option name="myUpdateName" value="Merged with conflicts" />
-        <option name="myStatusName" value="Will be merged with conflicts" />
-        <option name="mySupportsDeletion" value="false" />
-        <option name="myCanBeAbsent" value="false" />
-        <option name="myId" value="MERGED_WITH_CONFLICTS" />
-      </FILE-GROUP>
-      <FILE-GROUP>
-        <option name="myUpdateName" value="Merged with tree conflicts" />
-        <option name="myStatusName" value="Merged with tree conflicts" />
-        <option name="mySupportsDeletion" value="false" />
-        <option name="myCanBeAbsent" value="false" />
-        <option name="myId" value="MERGED_WITH_TREE_CONFLICT" />
-      </FILE-GROUP>
-      <FILE-GROUP>
-        <option name="myUpdateName" value="Merged with property conflicts" />
-        <option name="myStatusName" value="Will be merged with property conflicts" />
-        <option name="mySupportsDeletion" value="false" />
-        <option name="myCanBeAbsent" value="false" />
-        <option name="myId" value="MERGED_WITH_PROPERTY_CONFLICT" />
-      </FILE-GROUP>
-      <FILE-GROUP>
-        <option name="myUpdateName" value="Merged" />
-        <option name="myStatusName" value="Will be merged" />
-        <option name="mySupportsDeletion" value="false" />
-        <option name="myCanBeAbsent" value="false" />
-        <option name="myId" value="MERGED" />
-      </FILE-GROUP>
-      <FILE-GROUP>
-        <option name="myUpdateName" value="Not in repository" />
-        <option name="myStatusName" value="Not in repository" />
-        <option name="mySupportsDeletion" value="true" />
-        <option name="myCanBeAbsent" value="false" />
-        <option name="myId" value="UNKNOWN" />
-      </FILE-GROUP>
-      <FILE-GROUP>
-        <option name="myUpdateName" value="Locally added" />
-        <option name="myStatusName" value="Locally added" />
-        <option name="mySupportsDeletion" value="false" />
-        <option name="myCanBeAbsent" value="false" />
-        <option name="myId" value="LOCALLY_ADDED" />
-      </FILE-GROUP>
-      <FILE-GROUP>
-        <option name="myUpdateName" value="Locally removed" />
-        <option name="myStatusName" value="Locally removed" />
-        <option name="mySupportsDeletion" value="false" />
-        <option name="myCanBeAbsent" value="false" />
-        <option name="myId" value="LOCALLY_REMOVED" />
-      </FILE-GROUP>
-      <FILE-GROUP>
-        <option name="myUpdateName" value="Switched" />
-        <option name="myStatusName" value="Switched" />
-        <option name="mySupportsDeletion" value="false" />
-        <option name="myCanBeAbsent" value="false" />
-        <option name="myId" value="SWITCHED" />
-      </FILE-GROUP>
-    </UpdatedFiles>
   </component>
   <component name="RunDashboard">
     <option name="ruleStates">
@@ -513,32 +472,58 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1382" height="784" extended-state="6" />
+    <frame x="65" y="308" width="1301" height="772" extended-state="6" />
+    <editor active="true" />
     <layout>
       <window_info anchor="bottom" id="TODO" order="7" />
       <window_info anchor="bottom" id="Event Log" order="10" sideWeight="0.50075644" side_tool="true" weight="0.32972136" />
       <window_info anchor="bottom" id="Database Changes" order="11" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Version Control" order="9" sideWeight="0.49961567" weight="0.32972136" />
-      <window_info anchor="bottom" id="Python Console" order="13" weight="0.32972136" />
       <window_info anchor="bottom" id="Run" order="3" sideWeight="0.49924356" weight="0.32972136" />
-      <window_info anchor="bottom" id="Terminal" order="12" sideWeight="0.49961567" weight="0.3482972" />
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.290469" />
+      <window_info anchor="bottom" id="Version Control" order="9" sideWeight="0.49961567" weight="0.20180723" />
+      <window_info anchor="bottom" id="Python Console" order="13" weight="0.32972136" />
+      <window_info anchor="bottom" id="Terminal" order="12" sideWeight="0.49961567" weight="0.43825302" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.19907764" />
       <window_info anchor="bottom" id="Docker" order="8" show_stripe_button="false" />
       <window_info anchor="right" id="Database" order="3" weight="0.32980332" />
       <window_info anchor="right" id="SciView" order="4" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
-      <window_info anchor="bottom" id="Concurrent Activities Diagram" visible="true" weight="0.32972136" />
-      <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Debug" order="4" weight="0.4" />
-      <window_info anchor="bottom" id="Thumbnails" order="0" weight="0.3298193" />
+      <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="6" weight="0.4" />
+      <window_info anchor="bottom" id="Thumbnails" order="0" weight="0.3298193" />
       <window_info anchor="right" id="Commander" order="0" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="bottom" id="Message" order="1" />
       <window_info anchor="bottom" id="Cvs" order="5" weight="0.25" />
       <window_info anchor="bottom" id="Find" order="2" weight="0.3298193" />
+      <window_info anchor="bottom" id="Concurrent Activities Diagram" order="14" visible="true" weight="0.32972136" />
     </layout>
+    <layout-to-restore>
+      <window_info anchor="bottom" id="Thumbnails" order="0" weight="0.3298193" />
+      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.19907764" />
+      <window_info anchor="bottom" id="Docker" order="8" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Version Control" order="9" sideWeight="0.49961567" weight="0.20180723" />
+      <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
+      <window_info anchor="right" id="SciView" order="4" />
+      <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
+      <window_info anchor="right" id="Commander" order="0" weight="0.4" />
+      <window_info anchor="bottom" id="TODO" order="7" />
+      <window_info anchor="bottom" id="Database Changes" order="11" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Run" order="3" sideWeight="0.49924356" weight="0.32972136" />
+      <window_info anchor="bottom" id="Find" order="2" weight="0.3298193" />
+      <window_info anchor="bottom" id="Python Console" order="13" weight="0.32972136" />
+      <window_info anchor="bottom" id="Debug" order="4" weight="0.4" />
+      <window_info anchor="right" id="Database" order="3" weight="0.32980332" />
+      <window_info anchor="bottom" id="Terminal" order="12" sideWeight="0.49961567" visible="true" weight="0.43825302" />
+      <window_info anchor="bottom" id="Event Log" order="10" sideWeight="0.50075644" side_tool="true" weight="0.32972136" />
+      <window_info anchor="bottom" id="Inspection" order="6" weight="0.4" />
+      <window_info anchor="bottom" id="Cvs" order="5" weight="0.25" />
+      <window_info anchor="bottom" id="Concurrent Activities Diagram" order="14" visible="true" weight="0.32972136" />
+      <window_info anchor="bottom" id="Message" order="1" />
+      <window_info id="Favorites" order="2" side_tool="true" />
+    </layout-to-restore>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="1" />
@@ -555,27 +540,6 @@
     <option name="UPDATE_GROUP_BY_PACKAGES" value="true" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$USER_HOME$/Descargas/schedule-template-master/index.html" />
-    <entry file="file://$PROJECT_DIR$/horarioEspacios/static/scss/style.scss" />
-    <entry file="file://$PROJECT_DIR$/horarioEspacios/static/js/jquery-3.0.0.min.js">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/espacios/urls.py">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/espacios/tests.py">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/espacios/apps.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="54">
-          <caret line="3" column="14" selection-start-line="3" selection-start-column="14" selection-end-line="3" selection-end-column="14" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/espacios/admin.py">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
     <entry file="file://$PROJECT_DIR$/horarioEspacios/index.html" />
     <entry file="file://$PROJECT_DIR$/prestamos/models.py" />
     <entry file="file://$PROJECT_DIR$/horarioEspacios/static/js/modernizr.js">
@@ -590,13 +554,6 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/static/images/ola.jpg">
       <provider selected="true" editor-type-id="images" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/horarioEspacios/models.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="54">
-          <caret line="3" selection-start-line="3" selection-end-line="3" />
-        </state>
-      </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/autenticacion/views.py">
       <provider selected="true" editor-type-id="text-editor">
@@ -621,37 +578,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/horarioEspacios/static/css/style.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="324">
-          <caret line="18" column="1" lean-forward="true" selection-start-line="18" selection-start-column="1" selection-end-line="18" selection-end-column="1" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/horarioEspacios/templates/index.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="341">
-          <caret line="49" column="28" lean-forward="true" selection-start-line="49" selection-start-column="28" selection-end-line="49" selection-end-column="28" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/espacios/views.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret column="10" lean-forward="true" selection-start-column="10" selection-end-column="10" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/horarioEspacios/views.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="104">
-          <caret line="8" column="21" selection-start-line="8" selection-start-column="21" selection-end-line="8" selection-end-column="21" />
-          <folding>
-            <element signature="e#0#35#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/autenticacion/templates/autenticacion/index.html">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
@@ -670,16 +596,6 @@
       </provider>
     </entry>
     <entry file="file://$USER_HOME$/Descargas/2018-1-Simmonds-Manzanilla-T3-Develop/venv/lib/python3.6/site-packages/django/template/defaulttags.py" />
-    <entry file="file://$PROJECT_DIR$/horarioEspacios/templates/horario.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1955">
-          <caret line="115" column="45" selection-start-line="115" selection-start-column="45" selection-end-line="115" selection-end-column="45" />
-          <folding>
-            <element signature="n#style#0;n#li#1;n#ul#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/horarioEspacios/static/css/horario.css">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="102">
@@ -687,13 +603,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$USER_HOME$/Anaconda3/envs/2018-1-Simmonds-Manzanilla-T3/Lib/site-packages/django/urls/conf.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="68">
-          <caret line="11" column="4" selection-start-line="11" selection-start-column="4" selection-end-line="11" selection-end-column="11" />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$USER_HOME$/Anaconda3/envs/2018-1-Simmonds-Manzanilla-T3/Lib/site-packages/django/urls/conf.py" />
     <entry file="file://$PROJECT_DIR$/horarioEspacios/urls.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="136">
@@ -708,56 +618,22 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="374">
           <caret line="22" column="17" selection-start-line="22" selection-start-column="17" selection-end-line="22" selection-end-column="17" />
-          <folding>
-            <element signature="n#style#0;n#span#1;n#h4#0;n#li#1;n#ul#0;n#div#0;n#nav#0;n#header#0;n#!!top" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/perfilUser/templates/perfilUser/reservasUsuario.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="68">
-          <caret line="4" column="2" selection-start-line="4" selection-start-column="2" selection-end-line="4" selection-end-column="30" />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/perfilUser/templates/perfilUser/reservasUsuario.html" />
     <entry file="file://$PROJECT_DIR$/autenticacion/templates/autenticacion/newuser.html">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
     <entry file="file://$PROJECT_DIR$/autenticacion/templates/autenticacion/logout_succes.html">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/poblarBaseDeDatos">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-2423">
-          <caret line="2" lean-forward="true" selection-start-line="2" selection-end-line="2" />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/poblarBaseDeDatos" />
     <entry file="file://$PROJECT_DIR$/static/images/microfono1.jpg">
       <provider selected="true" editor-type-id="images" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/espacios/models.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="228">
-          <caret line="16" lean-forward="true" selection-start-line="16" selection-end-line="16" />
-          <folding>
-            <element signature="e#0#28#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/articulos/tests.py">
       <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/articulos/urls.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <folding>
-            <element signature="e#0#36#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/InventarioCEI/urls.py">
       <provider selected="true" editor-type-id="text-editor">
@@ -776,82 +652,171 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/poblarBaseDeDatos.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="34">
-          <caret line="65" column="18" lean-forward="true" selection-start-line="65" selection-start-column="18" selection-end-line="65" selection-end-column="18" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/articulos/templates/articulos/style.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="221">
-          <caret line="13" column="1" selection-start-line="13" selection-start-column="1" selection-end-line="13" selection-end-column="1" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/articulos/views.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="136">
-          <caret line="8" column="57" lean-forward="true" selection-start-line="8" selection-start-column="57" selection-end-line="8" selection-end-column="57" />
-          <folding>
-            <element signature="e#0#35#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/articulos/templates/articulos/style.css" />
     <entry file="file://$PROJECT_DIR$/README.md">
-      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
-        <state split_layout="SPLIT">
-          <first_editor relative-caret-position="178">
-            <caret line="70" column="4" lean-forward="true" selection-start-line="70" selection-start-column="4" selection-end-line="70" selection-end-column="4" />
-          </first_editor>
-          <second_editor />
-        </state>
-      </provider>
+      <provider selected="true" editor-type-id="text-editor" />
     </entry>
     <entry file="file://$PROJECT_DIR$/articulos/models.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="119">
-          <caret line="30" column="7" lean-forward="true" selection-start-line="30" selection-start-column="7" selection-end-line="30" selection-end-column="7" />
+        <state relative-caret-position="522">
+          <caret line="30" column="7" selection-start-line="30" selection-start-column="7" selection-end-line="30" selection-end-column="7" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/templates/base.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="153">
+        <state relative-caret-position="162">
           <caret line="9" column="19" selection-start-line="9" selection-start-column="19" selection-end-line="9" selection-end-column="19" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/articulos/static/css/articulos/style.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="102">
+        <state relative-caret-position="108">
           <caret line="6" column="13" selection-start-line="6" selection-start-column="13" selection-end-line="6" selection-end-column="13" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/templates/imports.html">
+    <entry file="file://$PROJECT_DIR$/articulos/forms.py" />
+    <entry file="file://$PROJECT_DIR$/articulos/templates/articulos/landing.html">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/articulos/forms.py">
+    <entry file="file://$PROJECT_DIR$/articulos/urls.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="34">
-          <caret line="2" lean-forward="true" selection-start-line="2" selection-end-line="2" />
+        <state>
+          <folding>
+            <element signature="e#0#36#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/imports.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="180">
+          <caret line="10" lean-forward="true" selection-start-line="10" selection-end-line="10" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/horarioEspacios/static/css/style.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-16">
+          <caret line="305" column="22" selection-start-line="305" selection-start-column="22" selection-end-line="305" selection-end-column="22" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/articulos/templates/articulos/ficha.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="130">
+        <state relative-caret-position="944">
           <caret line="68" selection-start-line="68" selection-end-line="68" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/articulos/views.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="180">
+          <caret line="11" column="26" lean-forward="true" selection-start-line="11" selection-start-column="26" selection-end-line="11" selection-end-column="26" />
           <folding>
-            <element signature="e#703#729#0#HTML" expanded="true" />
-            <element signature="e#594#614#0#HTML" expanded="true" />
-            <element signature="e#667#687#0#HTML" expanded="true" />
-            <element signature="e#4855#4882#0#HTML" expanded="true" />
-            <element signature="e#1816#1855#0#HTML" expanded="true" />
-            <element signature="e#1573#1955#0#HTML" />
+            <element signature="e#0#35#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/perfilUsuario/models.py">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/perfilUsuario/views.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="252">
+          <caret line="23" column="5" lean-forward="true" selection-start-line="23" selection-start-column="5" selection-end-line="23" selection-end-column="5" />
+          <folding>
+            <element signature="e#0#45#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/perfilUsuario/templates/perfilUsuario/ultimas_reservas_espacios.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="162">
+          <caret line="9" column="16" lean-forward="true" selection-start-line="9" selection-start-column="16" selection-end-line="9" selection-end-column="16" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/horarioEspacios/models.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="54">
+          <caret line="3" selection-start-line="3" selection-end-line="3" />
+          <folding>
+            <element signature="e#0#28#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/espacios/models.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="162">
+          <caret line="33" column="16" lean-forward="true" selection-start-line="33" selection-start-column="16" selection-end-line="33" selection-end-column="16" />
+          <folding>
+            <element signature="e#0#28#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/poblarBaseDeDatos.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-1224">
+          <caret line="4" lean-forward="true" selection-start-line="4" selection-end-line="4" />
+          <folding>
+            <element signature="e#119#158#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/espacios/views.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret column="35" lean-forward="true" selection-start-column="35" selection-end-column="35" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/horarioEspacios/templates/horario.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="252">
+          <caret line="14" column="22" lean-forward="true" selection-start-line="14" selection-start-column="22" selection-end-line="14" selection-end-column="22" />
+          <folding>
+            <element signature="n#style#0;n#li#1;n#ul#0;n#div#0;n#div#0;n#!!top" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/perfilUsuario/templates/perfilUsuario/perfilUsuario.html">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/perfilUsuario/templates/perfilUsuario/botonesHacerReserva.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret selection-end-column="26" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/horarioEspacios/templates/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="270">
+          <caret line="15" column="50" selection-start-line="15" selection-start-column="50" selection-end-line="15" selection-end-column="50" />
+          <folding>
+            <element signature="n#style#0;n#li#0;n#ul#0;n#li#0;n#ul#0;n#div#1;n#div#0;n#!!top" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/perfilUsuario/templates/perfilUsuario/nav_reservas_articulos.html">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/horarioEspacios/views.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="199">
+          <caret line="12" column="30" selection-start-line="12" selection-start-column="30" selection-end-line="12" selection-end-column="30" />
+          <folding>
+            <element signature="e#0#35#0" expanded="true" />
           </folding>
         </state>
       </provider>

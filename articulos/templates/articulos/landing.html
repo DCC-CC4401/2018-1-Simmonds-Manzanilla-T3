@@ -25,8 +25,8 @@
   <div class="container">
 	<div class="row">
 		<div class="col-md-12">
-            <div class="input-group" id="adv-search">
-                <input type="text" class="form-control" placeholder="Artículo a buscar" />
+            <form action="{% url 'search' %}" method="get" class="input-group" id="adv-search">
+                <input type="text" class="form-control" placeholder="Artículo a buscar" name="articulo">
                 <div class="input-group-btn">
                     <div class="btn-group" role="group">
                         <div class="dropdown dropdown-lg">
@@ -41,7 +41,7 @@
                                   </div>
                                   <div class="form-group">
                                     <label for="contain">Disponibilidad</label>
-                                    <select class="form-control">
+                                    <select name="estado" class="form-control">
                                           <option value="0" selected>Cualquiera</option>
                                         {% for key,str in estados %}
                                           <option value="{{ key }}">{{ str }}</option>
@@ -52,18 +52,25 @@
                                 </form>
                             </div>
                         </div>
-                        <button type="button" class="btn btn-primary"><span class="fas fa-search" aria-hidden="true"></span></button>
+                        <button type="submit" class="btn btn-primary"><span class="fas fa-search" aria-hidden="true"></span></button>
                     </div>
                 </div>
+            </form>
             </div>
         </div>
     </div>
-  </div>
 
   <div class="container">
 	<div class="row">
-	  <div class="col-md-12">
-
+	  <div class="col-md-5">
+        {% for product in search %}
+        <div class="card" style="width: 18rem;">
+        <img class="card-img-top" src="{{ product.foto.url }}" alt="Card image cap">
+        <div class="card-body">
+          <p class="card-text">{{ product.nombre }}</p>
+        </div>
+        </div>
+        {% endfor %}
       </div>
     </div>
   </div>

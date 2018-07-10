@@ -299,11 +299,11 @@ Main Components
 .cd-schedule .single-event[data-event="event-1"],
 .cd-schedule [data-event="event-1"] .header-bg {
   /* this is used to set a background color for the event and the modal window */
-  background: #577F92;
+  background: #A2B9B2;
 }
 
 .cd-schedule .single-event[data-event="event-1"]:hover {
-  background: #618da1;
+  background: cornsilk;
 }
 
 .cd-schedule .single-event[data-event="event-2"],
