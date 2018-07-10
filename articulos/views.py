@@ -10,7 +10,8 @@ import articulos.models as models
 def index(request):
     estados = models.Articulo.ESTADO
     context = {'estados':estados,
-               'top4':get_top4(),}
+               'top4':get_top4(),
+               'usuario':request.user,}
     return render(request, 'articulos/landing.html', context)
 
 def search(request):
@@ -24,17 +25,19 @@ def search(request):
         estados = models.Articulo.ESTADO
         context = {'estados': estados,
                    'top4':get_top4(),
-                   'search': query}
+                   'search': query,
+                   'usuario':request.user,}
         return render(request, 'articulos/landing.html', context)
 
 def ficha(request):
     if request.method == 'GET':
         art_id = request.GET.get('fichart')
-        form = forms.reservaForm()
         art = models.Articulo.objects.get(id=art_id)
+        form = forms.reservaForm()
         context = {'articulo': art,
                    'reservas': models.ReservaArticulo.objects.filter(articulo=art),
-                   'reservaForm': form
+                   'usuario':request.user,
+                   'reservaForm': form,
                    }
         return render(request, 'articulos/ficha.html', context)
     else:
@@ -43,14 +46,14 @@ def ficha(request):
         art = models.Articulo.objects.get(id=art_id)
         context = {'articulo': art,
                    'reservas': models.ReservaArticulo.objects.filter(articulo=art),
-                   'reservaForm': form
+                   'usuario':request.user,
+                   'reservaForm': form,
                    }
         if form.is_valid():
             print('ok form')
         else:
             print('form not valid')
         return render(request, 'articulos/ficha.html', context)
-
 
 def get_top4():
     return models.Articulo.objects.annotate(counter=Count('reservaarticulo')).order_by("-counter")[:4]
