@@ -18,9 +18,9 @@
               <li class="nav-item">
                 <h4>
                 {% if usuario.is_active %}
-                  <span class="fa fa-circle aline-middle" style="color:green; font-size: 15px;"></span>
+                  <span class="fa fa-circle aline-middle" style="color:green; font-size: 15px;" data-toggle="tooltip" data-placement="left" title="Habilitado para hacer reservas"></span>
                 {% else %}
-                  <span class="fa fa-circle aline-middle" style="color:red; font-size: 15px;"></span>
+                  <span class="fa fa-circle aline-middle" style="color:red; font-size: 15px;" data-toggle="tooltip" data-placement="left" title="Deshabilitado para hacer reservas"></span>
                 {% endif %}
                   {{usuario.nombre}} </h4>
                 <h5>{{usuario.rut}}</h5>
@@ -35,7 +35,7 @@
                   {% if usuario.is_admin %}
                     <a class="dropdown-item" href="{% url 'landingPageAdmin' %}">Página de Inicio</a>
                   {% else %}
-                    <a class="dropdown-item" href="{% url 'perfil' %}">Página de Inicio</a>
+                    <a class="dropdown-item" href="{% url 'landingPageNaturales' %}">Página de Inicio</a>
                   {% endif %}
                   <a class="dropdown-item" href="{% url 'perfil' %}">Perfil de usuario</a>
                   <a class="dropdown-item" href="{% url 'logout_view' %}">Cerrar sesión</a>

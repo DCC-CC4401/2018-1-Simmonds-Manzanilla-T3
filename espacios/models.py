@@ -41,7 +41,7 @@ class ReservaEspacio(models.Model):
 
     ESTADO = (
     (PENDIENTE, 'Pendiente'),
-    (RECHAZADA, 'Aceptada'),
+    (ACEPTADA, 'Aceptada'),
     (RECHAZADA, 'Rechazada'),
     (TERMINADA, 'Terminada'),
     )

@@ -52,7 +52,7 @@ def login_view(request):
 				return redirect('landingPageAdmin')
 				#return redirect('landing page admin')
 			#página a la que vá si no es administrador.
-			return redirect('perfil')
+			return redirect('landingPageNaturales')
 			#return redirect('landing page user')
 		else:
 			# Return an 'invalid login' error message.

@@ -10,9 +10,18 @@
         {{reserva_espacio.espacio.nombre}}
       </div>
       <div>
-        <span class="badge badge-secondary badge-pill">
-          {{reserva_espacio.get_estado_display}}
-        </span>
+        {% if reserva_espacio.get_estado_display == "Pendiente" %}
+        <span class="badge badge-pill badge-warning">Pendiente</span>
+        {% endif %}
+        {% if reserva_espacio.get_estado_display == "Aceptada" %}
+        <span class="badge badge-pill badge-success">Aceptada</span>
+        {% endif %}
+        {% if reserva_espacio.get_estado_display == "Rechazada" %}
+        <span class="badge badge-pill badge-dark">Rechazada</span>
+        {% endif %}
+        {% if reserva_espacio.get_estado_display == "Terminada" %}
+        <span class="badge badge-pill badge-secondary">Terminada</span>
+        {% endif %}
       </div>
     </div>
   </a>
@@ -28,9 +37,18 @@
         {{reserva_espacio.espacio.nombre}}
       </div>
       <div>
-        <span class="badge badge-secondary badge-pill">
-          {{reserva_espacio.get_estado_display}}
-        </span>
+        {% if reserva_espacio.get_estado_display == "Pendiente" %}
+        <span class="badge badge-pill badge-warning">Pendiente</span>
+        {% endif %}
+        {% if reserva_espacio.get_estado_display == "Aceptada" %}
+        <span class="badge badge-pill badge-success">Aceptada</span>
+        {% endif %}
+        {% if reserva_espacio.get_estado_display == "Rechazada" %}
+        <span class="badge badge-pill badge-dark">Rechazada</span>
+        {% endif %}
+        {% if reserva_espacio.get_estado_display == "Terminada" %}
+        <span class="badge badge-pill badge-secondary">Terminada</span>
+        {% endif %}
       </div>
     </div>
   </a>

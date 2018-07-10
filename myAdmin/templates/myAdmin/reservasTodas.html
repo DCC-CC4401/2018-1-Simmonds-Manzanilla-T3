@@ -1,0 +1,77 @@
+<div class= "row">
+  <div class="container col">
+    <h2>Articulos</h2>
+    <table class="table table-striped">
+      <thead>
+        <tr>
+          <th>ID</th>
+          <th>Articulo</th>
+          <th>Estado</th>
+          <th>
+          </th>
+        </tr>
+      </thead>
+      <tbody>
+        {% for reserva_articulo in todas_reservas_articulos %}
+        <tr>
+          <td>{{reserva_articulo.id}}</td>
+          <td>{{reserva_articulo.articulo.nombre}}</td>
+          <td>
+            {% if reserva_articulo.get_estado_display == "Pendiente" %}
+            <span class="badge badge-pill badge-warning">Pendiente</span>
+            {% endif %}
+            {% if reserva_articulo.get_estado_display == "Aceptado" %}
+            <span class="badge badge-pill badge-success">Aceptado</span>
+            {% endif %}
+            {% if reserva_articulo.get_estado_display == "Rechazado" %}
+            <span class="badge badge-pill badge-dark">Rechazado</span>
+            {% endif %}
+            {% if reserva_articulo.get_estado_display == "Devuelto" %}
+            <span class="badge badge-pill badge-secondary">Devuelto</span>
+            {% endif %}
+            {% if reserva_articulo.get_estado_display == "No devuelto" %}
+            <span class="badge badge-pill badge-danger">No Devuelto</span>
+            {% endif %}
+          </td>
+        </tr>
+        {% endfor %}
+      </tbody>
+    </table>
+  </div>
+  <div class="container col">
+    <h2>Espacios</h2>
+    <table class="table table-striped">
+      <thead>
+        <tr>
+          <th>ID</th>
+          <th>Espacio</th>
+          <th>Estado</th>
+          <th>
+          </th>
+        </tr>
+      </thead>
+      <tbody>
+        {% for reserva_espacio in todas_reservas_espacios %}
+        <tr>
+          <td>{{reserva_espacio.id}}</td>
+          <td>{{reserva_espacio.espacio.nombre}}</td>
+          <td>
+            {% if reserva_espacio.get_estado_display == "Pendiente" %}
+            <span class="badge badge-pill badge-warning">Pendiente</span>
+            {% endif %}
+            {% if reserva_espacio.get_estado_display == "Aceptada" %}
+            <span class="badge badge-pill badge-success">Aceptada</span>
+            {% endif %}
+            {% if reserva_espacio.get_estado_display == "Rechazada" %}
+            <span class="badge badge-pill badge-dark">Rechazada</span>
+            {% endif %}
+            {% if reserva_espacio.get_estado_display == "Terminada" %}
+            <span class="badge badge-pill badge-secondary">Terminada</span>
+            {% endif %}
+          </td>
+        </tr>
+        {% endfor %}
+      </tbody>
+    </table>
+  </div>
+</div>

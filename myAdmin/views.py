@@ -15,12 +15,16 @@ def landingPageAdmin(request):
     usuario_actual = request.user
     usuarios_no_admins = MyUser.objects.filter(is_admin=False)
     articulos_reservados = ReservaArticulo.objects.filter(estado=ReservaArticulo.PENDIENTE).order_by('-devolucion')[:50]
+    todas_reservas_articulos=ReservaArticulo.objects.all()
+    todas_reservas_espacios=ReservaEspacio.objects.all()
     espacios_reservados = ReservaEspacio.objects.filter(estado=ReservaArticulo.PENDIENTE).order_by('-fin')[:50]
     context = {
         'usuario' : usuario_actual,
         'users':usuarios_no_admins,
         'articulos_reservados' : articulos_reservados,
         'espacios_reservados' : espacios_reservados,
+        'todas_reservas_articulos':todas_reservas_articulos,
+        'todas_reservas_espacios':todas_reservas_espacios,
     }
     if request.method == 'POST':
         indices_reservas=[]
@@ -43,6 +47,7 @@ def landingPageAdmin(request):
             for indice in indices_reservas:
                     reserva_a_cambiar = articulos_reservados[numero]
                     reserva_a_cambiar.estado = ReservaArticulo.ACEPTADO
+                    reserva_a_cambiar.autorizador=usuario_actual
                     reserva_a_cambiar.save()
         if 'aceptar_espacios' in request.POST:
             for req in request.POST:
@@ -52,7 +57,8 @@ def landingPageAdmin(request):
             indices_reservas.sort(reverse=True)
             for indice in indices_reservas:
                     reserva_a_cambiar=espacios_reservados[numero]
-                    reserva_a_cambiar.estado= ReservaEspacio.RECHAZADA
+                    reserva_a_cambiar.estado= ReservaEspacio.ACEPTADA
+                    reserva_a_cambiar.autorizador=usuario_actual
                     reserva_a_cambiar.save()
         if 'rechazar_espacios' in request.POST:
             for req in request.POST:
@@ -62,7 +68,7 @@ def landingPageAdmin(request):
             indices_reservas.sort(reverse=True)
             for indice in indices_reservas:
                     reserva_a_cambiar=espacios_reservados[numero]
-                    reserva_a_cambiar.estado= ReservaEspacio.ACEPTADA
+                    reserva_a_cambiar.estado= ReservaEspacio.RECHAZADA
                     reserva_a_cambiar.save()
 
     return render(request, 'myAdmin/landingPageAdmin.html', context)

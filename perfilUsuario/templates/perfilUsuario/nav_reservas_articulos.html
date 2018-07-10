@@ -10,9 +10,21 @@
         {{reserva_articulo.articulo.nombre}}
       </div>
       <div>
-        <span class="badge badge-secondary badge-pill">
-          {{reserva_articulo.get_estado_display}}
-        </span>
+        {% if reserva_articulo.get_estado_display == "Pendiente" %}
+        <span class="badge badge-pill badge-warning">Pendiente</span>
+        {% endif %}
+        {% if reserva_articulo.get_estado_display == "Aceptado" %}
+        <span class="badge badge-pill badge-success">Aceptado</span>
+        {% endif %}
+        {% if reserva_articulo.get_estado_display == "Rechazado" %}
+        <span class="badge badge-pill badge-dark">Rechazado</span>
+        {% endif %}
+        {% if reserva_articulo.get_estado_display == "Devuelto" %}
+        <span class="badge badge-pill badge-secondary">Devuelto</span>
+        {% endif %}
+        {% if reserva_articulo.get_estado_display == "No devuelto" %}
+        <span class="badge badge-pill badge-danger">No Devuelto</span>
+        {% endif %}
       </div>
     </div>
   </a>
@@ -28,9 +40,21 @@
         {{reserva_articulo.articulo.nombre}}
       </div>
       <div>
-        <span class="badge badge-secondary badge-pill">
-          {{reserva_articulo.get_estado_display}}
-        </span>
+        {% if reserva_articulo.get_estado_display == "Pendiente" %}
+        <span class="badge badge-pill badge-warning">Pendiente</span>
+        {% endif %}
+        {% if reserva_articulo.get_estado_display == "Aceptado" %}
+        <span class="badge badge-pill badge-success">Aceptado</span>
+        {% endif %}
+        {% if reserva_articulo.get_estado_display == "Rechazado" %}
+        <span class="badge badge-pill badge-dark">Rechazado</span>
+        {% endif %}
+        {% if reserva_articulo.get_estado_display == "Devuelto" %}
+        <span class="badge badge-pill badge-secondary">Devuelto</span>
+        {% endif %}
+        {% if reserva_articulo.get_estado_display == "No devuelto" %}
+        <span class="badge badge-pill badge-danger">No Devuelto</span>
+        {% endif %}
       </div>
     </div>
   </a>
