@@ -18,7 +18,8 @@ class Articulo(View):
 def index(request):
     estados = models.Articulo.ESTADO
     context = {'estados':estados,
-               'top4':get_top4(),}
+               'top4':get_top4(),
+               'usuario':request.user,}
     return render(request, 'articulos/landing.html', context)
 
 def search(request):
@@ -32,7 +33,8 @@ def search(request):
         estados = models.Articulo.ESTADO
         context = {'estados': estados,
                    'top4':get_top4(),
-                   'search': query}
+                   'search': query,
+                   'usuario':request.user,}
         return render(request, 'articulos/landing.html', context)
 
 def ficha(request):
@@ -40,7 +42,8 @@ def ficha(request):
         art_id = request.GET.get('fichart')
         art = models.Articulo.objects.get(id=art_id)
         context = {'articulo': art,
-                   'reservas': models.ReservaArticulo.objects.filter(articulo=art)}
+                   'reservas': models.ReservaArticulo.objects.filter(articulo=art),
+                   'usuario':request.user,}
         return render(request, 'articulos/ficha.html', context)
 
 
