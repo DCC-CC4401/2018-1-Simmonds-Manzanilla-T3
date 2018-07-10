@@ -1,8 +1,13 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+  {% load staticfiles %}
   <title>Perfil de Usuario - Inventario CEI</title>
+
   {% include 'imports.html' %}
+  <link rel="stylesheet" href="{% static 'css/reset.css'%}"> <!-- CSS reset -->
+  <link rel="stylesheet" href="{% static 'css/style.css'%}"> <!-- Resource style -->
+
 </head>
 <body>
   {% include 'navbar.html' %}
