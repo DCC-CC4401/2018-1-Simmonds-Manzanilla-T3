@@ -23,17 +23,24 @@ def landingPageAdmin(request):
         'espacios_reservados' : espacios_reservados,
     }
     if request.method == 'POST':
+        indices_reservas=[]
         if 'rechazar_articulos' in request.POST:
             for req in request.POST:
                 if 'res_articulos' in req:
                     numero=int(req[13:])
-                    reserva_a_cambiar = articulos_reservados[numero]
-                    reserva_a_cambiar.estado = ReservaArticulo.RECHAZADO
-                    reserva_a_cambiar.save()
+                    indices_reservas.append(numero)
+            indices_reservas.sort(reverse=True)
+            for indice in indices_reservas:
+                reserva_a_cambiar = articulos_reservados[indice]
+                reserva_a_cambiar.estado = ReservaArticulo.RECHAZADO
+                reserva_a_cambiar.save()
         if 'aceptar_articulos' in request.POST:
             for req in request.POST:
                 if 'res_articulos' in req:
                     numero=int(req[13:])
+                    indices_reservas.append(numero)
+            indices_reservas.sort(reverse=True)
+            for indice in indices_reservas:
                     reserva_a_cambiar = articulos_reservados[numero]
                     reserva_a_cambiar.estado = ReservaArticulo.ACEPTADO
                     reserva_a_cambiar.save()
@@ -41,15 +48,21 @@ def landingPageAdmin(request):
             for req in request.POST:
                 if 'res_espacios' in req:
                     numero=int(req[12:])
+                    indices_reservas.append(numero)
+            indices_reservas.sort(reverse=True)
+            for indice in indices_reservas:
                     reserva_a_cambiar=espacios_reservados[numero]
-                    reserva_a_cambiar.estado= ReservaArticulo.RECHAZADO
+                    reserva_a_cambiar.estado= ReservaEspacio.RECHAZADA
                     reserva_a_cambiar.save()
         if 'rechazar_espacios' in request.POST:
             for req in request.POST:
-                if 'res_articulos' in req:
-                    numero=int(req[13:])
+                if 'res_espacios' in req:
+                    numero=int(req[12:])
+                    indices_reservas.append(numero)
+            indices_reservas.sort(reverse=True)
+            for indice in indices_reservas:
                     reserva_a_cambiar=espacios_reservados[numero]
-                    reserva_a_cambiar.estado= ReservaArticulo.ACEPTADO
+                    reserva_a_cambiar.estado= ReservaEspacio.ACEPTADA
                     reserva_a_cambiar.save()
 
     return render(request, 'myAdmin/landingPageAdmin.html', context)
