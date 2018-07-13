@@ -1,0 +1,57 @@
+{% for reserva_espacio in ultimos_espacios_reservados %}
+{% if forloop.first %}
+<li class=" nav-item active row">
+  <div class="input-group-prepend col-1 px-2">
+    <input type="checkbox" name="espacio{{forloop.counter0}}">
+  </div>
+  <a class="nav-link active col" data-toggle="tab" href="#menuReservasEspacios{{forloop.counter}}">
+    <div class="d-flex justify-content-between">
+      <div>
+        {{reserva_espacio.espacio.nombre}}
+      </div>
+      <div>
+        {% if reserva_espacio.get_estado_display == "Pendiente" %}
+        <span class="badge badge-pill badge-warning">Pendiente</span>
+        {% endif %}
+        {% if reserva_espacio.get_estado_display == "Aceptada" %}
+        <span class="badge badge-pill badge-success">Aceptada</span>
+        {% endif %}
+        {% if reserva_espacio.get_estado_display == "Rechazada" %}
+        <span class="badge badge-pill badge-dark">Rechazada</span>
+        {% endif %}
+        {% if reserva_espacio.get_estado_display == "Terminada" %}
+        <span class="badge badge-pill badge-secondary">Terminada</span>
+        {% endif %}
+      </div>
+    </div>
+  </a>
+</li>
+{% else %}
+<li class=" nav-item row">
+  <div class="input-group-prepend col-1 px-2">
+    <input type="checkbox" name="espacio{{forloop.counter0}}">
+  </div>
+  <a class="nav-link col" data-toggle="tab" href="#menuReservasEspacios{{forloop.counter}}">
+    <div class="d-flex justify-content-between">
+      <div>
+        {{reserva_espacio.espacio.nombre}}
+      </div>
+      <div>
+        {% if reserva_espacio.get_estado_display == "Pendiente" %}
+        <span class="badge badge-pill badge-warning">Pendiente</span>
+        {% endif %}
+        {% if reserva_espacio.get_estado_display == "Aceptada" %}
+        <span class="badge badge-pill badge-success">Aceptada</span>
+        {% endif %}
+        {% if reserva_espacio.get_estado_display == "Rechazada" %}
+        <span class="badge badge-pill badge-dark">Rechazada</span>
+        {% endif %}
+        {% if reserva_espacio.get_estado_display == "Terminada" %}
+        <span class="badge badge-pill badge-secondary">Terminada</span>
+        {% endif %}
+      </div>
+    </div>
+  </a>
+</li>
+{% endif %}
+{% endfor %}

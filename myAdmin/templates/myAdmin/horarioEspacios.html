@@ -1,0 +1,141 @@
+{% load staticfiles %}
+
+<div class="cd-schedule loading">
+	<div class="timeline">
+		<ul>
+			<li><span>04:00</span></li>
+			<li><span>05:00</span></li>
+			<li><span>06:00</span></li>
+			<li><span>07:00</span></li>
+			<li><span>08:00</span></li>
+			<li><span>09:00</span></li>
+			<li><span>10:00</span></li>
+			<li><span>11:00</span></li>
+			<li><span>12:00</span></li>
+			<li><span>13:00</span></li>
+			<li><span>14:00</span></li>
+			<li><span>15:00</span></li>
+			<li><span>16:00</span></li>
+			<li><span>17:00</span></li>
+			<li><span>18:00</span></li>
+			<li><span>19:00</span></li>
+			<li><span>20:00</span></li>
+			<li><span>21:00</span></li>
+			<li><span>22:00</span></li>
+			<li><span>23:00</span></li>
+		</ul>
+	</div> <!-- .timeline -->
+	<div class="events">
+		<ul>
+			<li class="events-group">
+				<div class="top-info"><span>Lunes</span></div>
+				<ul>
+					{% for reserva in espacios_reservados %}
+					{% if reserva.inicio.weekday == 0 %}
+					<li class="single-event" data-start={{ reserva.inicio.time }} data-end={{ reserva.fin.time }} data-content="{{ reserva }}" data-event="event-1" style="background-color: #A2B9B2">
+						<a href="#0">
+							<em class="event-name">{{ reserva.espacio.nombre }}</em>
+						</a>
+					</li>
+					{% endif %}
+					{% endfor %}
+				</ul>
+			</li>
+
+			<li class="events-group">
+				<div class="top-info"><span>Martes</span></div>
+				<ul>
+					{% for reserva in espacios_reservados %}
+					{% if reserva.inicio.weekday == 1 %}
+					<li class="single-event" data-start={{ reserva.inicio.time }} data-end={{ reserva.fin.time }} data-content="{{ reserva }}" data-event="event-2">
+						<a href="#0">
+							<em class="event-name">{{ reserva.espacio.nombre }}</em>
+						</a>
+					</li>
+					{% endif %}
+					{% endfor %}
+				</ul>
+
+				<li class="events-group">
+					<div class="top-info"><span>Miercoles</span></div>
+					<ul>
+						{% for reserva in espacios_reservados %}
+						{% if reserva.inicio.weekday == 2 %}
+						<li class="single-event" data-start={{ reserva.inicio.time }} data-end={{ reserva.fin.time }} data-content="{{ reserva }}" data-event="event-1">
+							<a href="#0">
+								<em class="event-name">{{ reserva.espacio.nombre }}</em>
+							</a>
+						</li>
+						{% endif %}
+						{% endfor %}
+					</ul>
+				</li>
+
+
+				<li class="events-group">
+					<div class="top-info"><span>Jueves</span></div>
+					<ul>
+						{% for reserva in espacios_reservados %}
+						{% if reserva.inicio.weekday == 3 %}
+						<li class="single-event" data-start={{ reserva.inicio.time }} data-end={{ reserva.fin.time }} data-content="{{ reserva }}" data-event="event-1">
+							<a href="#0">
+								<em class="event-name">{{ reserva.espacio.nombre }}</em>
+							</a>
+						</li>
+						{% endif %}
+						{% endfor %}
+					</ul>
+				</li>
+
+
+				<li class="events-group">
+					<div class="top-info"><span>Viernes</span></div>
+					<ul>
+						{% for reserva in espacios_reservados %}
+						{% if reserva.inicio.weekday == 4 %}
+						<li class="single-event" data-start={{ reserva.inicio.time }} data-end={{ reserva.fin.time }} data-content="{{ reserva }}" data-event="event-1">
+							<a href="#0">
+								<em class="event-name">{{ reserva.espacio.nombre }}</em>
+							</a>
+						</li>
+						{% endif %}
+						{% endfor %}
+					</ul>
+				</li>
+			</ul>
+
+		</div>
+		<div class="event-modal">
+			<header class="header">
+				<div class="content">
+					<span class="event-date"></span>
+					<h3 class="event-name"></h3>
+				</div>
+
+				<div class="header-bg"></div>
+			</header>
+
+			<div class="body">
+				<div class="event-info"></div>
+				<div class="body-bg"></div>
+			</div>
+
+			<a href="#0" class="close">Close</a>
+		</div>
+
+		<div class="cover-layer"></div>
+	</div> <!-- .cd-schedule -->
+
+	<script src="{% static 'js/modernizr.js' %}"></script>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.0.0/jquery.min.js"></script>
+	<script src="{% static 'js/main.js' %}"></script> <!-- Resource jQuery -->
+
+	<nav class="navbar navbar-expand-lg">
+		<ul class="navbar-nav ml-auto mr-auto nav-fill w-30">
+			<li class="nav-item">
+				<a href="#" role="button" class="btn btn-primary">Semana anterior</a>
+				<a href="#" role="button" class="btn btn-primary">Semana actual</a>
+				<a href="#" role="button" class="btn btn-primary">Semana siguiente</a>
+			</li>
+		</ul>
+	</nav>

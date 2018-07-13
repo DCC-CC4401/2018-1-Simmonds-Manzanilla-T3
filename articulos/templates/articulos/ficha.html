@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<link>
+  <title>Ficha de artículo - Inventario CEI</title>
+  {% include 'imports.html' %}
+    <link rel="stylesheet" type="text/css" href="../../static/css/articulos/style.css">
+</head>
+<body>
+  {% include 'navbar.html' %}
+    <header style="padding-left: 40px">
+        <div class="container">
+                <h4>{{ articulo.nombre }} >> {{ articulo.get_estado_display}}
+                </h4>
+            </div>
+    </header>
+
+    <div class="container">
+        <div class="row">
+            <div class="modal-body row">
+                <div class="col-md-7 col-1">
+                    <div class="rounded" style="width: 400px">
+                        <img src="{{ articulo.foto.url }}" class="img-responsive" style="width: 400px">
+                    </div>
+
+                    <div>
+                        <h3>
+                            {{ articulo.descripcion }}
+                        </h3>
+                    </div>
+                </div>
+                <div class="col-md-5 col-3">
+                    <div class="container">
+                        <div>
+                            <p>
+                                <h3>
+                                    Solicitar Reserva
+                                </h3>
+                            </p>
+                            <div class="square">
+                                <form id="{{ articulo.nombre }}t" action="{% url 'ficha' %}" method="post">
+                                    <input type="hidden" value="{{ articulo.id }}"  name="fichart">
+                                    {% csrf_token %}
+                                    <p>Fecha: {{ reservaForm.fecha }}</p>
+                                    {% csrf_token %}
+                                    <p>Hora inicio: {{ reservaForm.horaInicio}}</p>
+                                    {% csrf_token %}
+                                    <p>Hora final: {{ reservaForm.horaFinal }}</p>
+                                    <button class="btn float-md-right" style="border-style: solid">Pedir</button>
+                                </form>
+                            </div>
+                        </div>
+                        <div>
+                            <p>
+                                <h3>
+                                    Historial Reservas
+                                </h3>
+                            </p>
+                            <div class="scrollbar reservas-list" style="font-size: small; padding: 10px">
+                                <ul>
+                                    {% for reserva in reservas %}
+                                        <li>{{ reserva.entrega|date:"d/m/Y h:m" }} hrs. a {{ reserva.devolucion|date:"d/m/Y h:m" }} hrs.</li>
+                                    {% endfor %}
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</body>
+</html>

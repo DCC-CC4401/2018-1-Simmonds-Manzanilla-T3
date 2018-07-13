@@ -1,0 +1,13 @@
+.img-responsive{
+  max-width: 90%;
+  height: 90%;
+}
+
+.square {
+  height: 230px;
+  width: 400px;
+  border: #222222;
+  border-style: solid;
+  border-width: thin;
+  padding: 20px;
+}

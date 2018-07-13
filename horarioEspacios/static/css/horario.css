@@ -1,0 +1,50 @@
+
+div.horario ul {
+    list-style-type: none;
+}
+
+
+div.horario table {
+    position: absolute;
+    width: 800px;
+    margin-left: 100px;
+    margin-top: 100px;
+}
+
+div.horario tr {
+    width: 500px;
+}
+
+div.horario th, div.horario td {
+    border-bottom: 1px solid #ddd;
+    height: 25px;
+}
+
+td.hora {
+    vertical-align: text-top;
+    font-size: smaller;
+    width: 60px;
+}
+
+div.horario th {
+    vertical-align: bottom;
+    font-size: small;
+    padding-left: 5px;
+}
+
+
+ul.lunes  {
+    position: absolute;
+    top: 85px;
+    left: 200px;
+    width: 800px;
+}
+
+li.reserva {
+    position: absolute;
+    border: 1px solid #b8b0d2;
+    padding-top: 8px;
+    padding-left: 8px;
+    width: 120px;
+}
+

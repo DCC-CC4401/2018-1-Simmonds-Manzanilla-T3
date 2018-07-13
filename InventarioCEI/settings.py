@@ -37,8 +37,15 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    'app.apps.AppConfig',
-]
+	'autenticacion.apps.AutenticacionConfig',
+    'espacios',
+    'articulos',
+    'horarioEspacios',
+    'perfilUsuario',
+    'bootstrap4',
+    'myAdmin'
+    ]
+
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
@@ -52,10 +59,12 @@ MIDDLEWARE = [
 
 ROOT_URLCONF = 'InventarioCEI.urls'
 
+
+
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [],
+        'DIRS': ['templates'],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
@@ -81,7 +90,11 @@ DATABASES = {
     }
 }
 
-
+#modelo de usuario usado
+AUTH_USER_MODEL = 'autenticacion.MyUser'
+#redirección para el decorator login_required usado en el inicio de sesión
+#si no esta logueado el usuario, lleva a esta página.
+LOGIN_URL = 'autenticacion.loging'
 # Password validation
 # https://docs.djangoproject.com/en/2.0/ref/settings/#auth-password-validators
 
@@ -119,5 +132,10 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/2.0/howto/static-files/
 
 STATIC_URL = '/static/'
+MEDIA_URL = '/media/'
+SITE_ROOT = os.path.realpath(os.path.dirname(__file__))
+MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
+
+STATICFILES_DIRS = [os.path.join(BASE_DIR, "static"),]
 
 TEMPLATE_DIRS = (os.path.join(BASE_DIR,  'templates'),)

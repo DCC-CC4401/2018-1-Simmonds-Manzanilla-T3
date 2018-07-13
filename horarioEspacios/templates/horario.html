@@ -1,0 +1,120 @@
+{% load staticfiles %}
+{% block head %}
+    <title>Horario</title>
+    {% include 'imports.html' %}
+    <link rel="stylesheet" href="{% static 'css/horario.css'%}">
+
+{% endblock %}
+
+{% block body %}
+{% include 'navbar.html' %}
+<div class="horario">
+<table>
+    <thead>
+        <th></th>
+        <th>Lunes</th>
+        <th>Martes</th>
+        <th>Miercoles</th>
+        <th>Jueves</th>
+        <th>Viernes</th>
+    </thead>
+    <tbody>
+        <tr>
+            <td class="hora"><b>08:00</b></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+        </tr>
+        <tr>
+            <td class="hora"><b>09:00</b></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+        </tr>
+        <tr>
+            <td class="hora"><b>10:00</b></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+        </tr>
+        <tr>
+            <td class="hora"><b>11:00</b></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+        </tr>
+        <tr>
+            <td class="hora"><b>12:00</b></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+        </tr>
+        <tr>
+            <td class="hora"><b>13:00</b></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+        </tr>
+        <tr>
+            <td class="hora"><b>14:00</b></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+        </tr>
+        <tr>
+            <td class="hora"><b>15:00</b></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+        </tr>
+        <tr>
+            <td class="hora"><b>16:00</b></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+        </tr>
+        <tr>
+            <td class="hora"><b>17:00</b></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+        </tr>
+        <tr>
+            <td class="hora"><b>18:00</b></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+        </tr>
+    </tbody>
+</table>
+    <div class="reservas">
+        <ul class="lunes">
+            <li class="reserva" style="top:200px; height: 90px;background-color: lightblue">Sala 1</li>
+            <li class="reserva" style="top:300px; height: 50px;background-color: burlywood">Quincho</li>
+        </ul>
+    </div>
+</div>
+
+{% endblock %}
